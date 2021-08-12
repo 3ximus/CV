@@ -1,0 +1,50 @@
+@import '~src/colors';
+
+.sidebar {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+
+	&-list.index {
+		margin-left: 20px;
+	}
+	&-list.contacts {
+		margin-right: 20px;
+		& > .sidebar-item {
+			justify-content: right;
+		}
+	}
+	&-list {
+		list-style: none;
+		padding: 0;
+	}
+	&-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		cursor: pointer;
+		& fa-icon {
+			font-size: 25px;
+			width: 30px;
+			transition: font-size .1s;
+		}
+		&-tooltip {
+			font-family: 'body';
+			margin-right: 20px;
+			margin-left: 20px;
+			opacity: 0;
+			transition: opacity .3s;
+		}
+		&:hover > .sidebar-item-tooltip {
+			opacity: 1;
+		}
+
+		&:hover > fa-icon {
+			font-size: 30px;
+		}
+	}
+}
+

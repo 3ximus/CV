@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~src/colors';
+
+body {
+    background-color: $light_color;
+    color: $dark_color;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'body';
+    src: url("assets/fonts/Klik-Light.otf");
+}
+
+@font-face {
+    font-family: 'body2';
+    src: url("assets/fonts/Praktika-Light.otf");
+}
+
+@font-face {
+    font-family: 'title';
+    src: url("assets/fonts/BaroneysTextured.ttf");
+}
