@@ -12,13 +12,16 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { faHome, faEnvelope, faUser, faTools, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
+import { ParallaxDirective } from './parallax.directive';
+
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         SkillsComponent,
         EducationComponent,
-        ExperienceComponent
+        ExperienceComponent,
+        ParallaxDirective,
     ],
     imports: [
         BrowserModule,
