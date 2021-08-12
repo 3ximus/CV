@@ -1,0 +1,22 @@
+@import '~src/colors';
+
+:host {
+    display: block;
+    height: 100vh;
+}
+
+.my-name {
+    position: absolute;
+    top: 40px;
+    left: 50vw;
+    font-size: 100px;
+    font-family: 'title';
+}
+
+.profile-picture {
+    position: absolute;
+    top: 10vh;
+    height: 700px;
+    left: 200px;
+}
+

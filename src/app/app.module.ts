@@ -3,25 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './home/home.component';
+import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faHome, faEnvelope, faUser, faTools, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 @NgModule({
-	declarations: [
-		AppComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		FontAwesomeModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        SkillsComponent,
+        EducationComponent,
+        ExperienceComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
-	constructor(private library: FaIconLibrary) {
-		library.addIcons(faHome, faUser, faTools, faGraduationCap, faBriefcase, faEnvelope, faGithub, faLinkedinIn);
-	}
+    constructor(private library: FaIconLibrary) {
+        library.addIcons(faHome, faUser, faTools, faGraduationCap, faBriefcase, faEnvelope, faGithub, faLinkedinIn);
+    }
 }
