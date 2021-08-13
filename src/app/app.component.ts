@@ -6,7 +6,7 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    private NUMBER_OF_PAGES:number = 4;
+    private NUMBER_OF_PAGES:number = 5;
     page : number = 1; // this is used to control index highlight
 
     scrollTo(el : HTMLElement) {

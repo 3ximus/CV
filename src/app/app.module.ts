@@ -13,6 +13,7 @@ import { faHome, faEnvelope, faUser, faTools, faGraduationCap, faBriefcase } fro
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import { ParallaxDirective } from './parallax.directive';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { ParallaxDirective } from './parallax.directive';
         EducationComponent,
         ExperienceComponent,
         ParallaxDirective,
+        AboutComponent,
     ],
     imports: [
         BrowserModule,
