@@ -27,7 +27,7 @@
 		flex-direction: row;
 		align-items: center;
 		cursor: pointer;
-		transition: color .4s;
+		transition: color .3s;
 		& fa-icon {
 			font-size: 25px;
 			width: 30px;
@@ -65,4 +65,7 @@
 	transform: rotateZ(90deg);
 	font-family: 'body';
 	font-size: 70px;
+	&.dark {
+		color: $light_color;
+	}
 }

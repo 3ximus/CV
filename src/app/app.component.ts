@@ -6,8 +6,9 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    private NUMBER_OF_PAGES:number = 5;
+    NUMBER_OF_PAGES:number = 5;
     page : number = 1; // this is used to control index highlight
+    pageScrolled : number = 1; // this is used to control
 
     scrollTo(el : HTMLElement) {
         const y: number = el.getBoundingClientRect().top + window.pageYOffset;
@@ -18,6 +19,7 @@ export class AppComponent {
     onWindowScroll(event:Event){
         const pageHeight = this.getDocumentHeight() / this.NUMBER_OF_PAGES;
         this.page = Math.floor((window.scrollY + pageHeight/2) / pageHeight + 1);
+        this.pageScrolled = Math.floor((window.scrollY - 50) / pageHeight + 1);; // this is used to control
     }
 
     // helper function to get the correct document height
