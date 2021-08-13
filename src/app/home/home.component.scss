@@ -1,7 +1,7 @@
 @import '~src/colors';
 
 :host {
-    display: block;
+    display: flex;
     height: 100vh;
     color: $light_color;
 }
@@ -25,9 +25,9 @@
 
 .profile-picture {
     position: absolute;
-    top: 150px;
     left: 200px;
     height: 700px;
+    max-height: 100vh;
 }
 
 .DELETEME {
@@ -38,7 +38,7 @@
     position: absolute;
     top: 0;
     left: 45vw;
-    height: 120vh;
+    height: 100vh;
     width: 662px;
     background-color: $dark_color;
 }

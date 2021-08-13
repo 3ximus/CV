@@ -1,24 +1,28 @@
 
+<nav #home></nav>
 <app-home></app-home>
+<nav #skills></nav>
 <app-skills></app-skills>
+<nav #experience></nav>
 <app-experience></app-experience>
+<nav #education></nav>
 <app-education></app-education>
 
 <div class="sidebar">
 	<ul class="sidebar-list index">
-		<li class="sidebar-item">
+		<li class="sidebar-item" (click)="scrollTo(home)">
 			<fa-icon [icon]="['fas', 'home']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">home</h2>
 		</li>
-		<li class="sidebar-item">
+		<li class="sidebar-item" (click)="scrollTo(skills)">
 			<fa-icon [icon]="['fas', 'tools']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">skills</h2>
 		</li>
-		<li class="sidebar-item">
+		<li class="sidebar-item" (click)="scrollTo(experience)">
 			<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">experience</h2>
 		</li>
-		<li class="sidebar-item">
+		<li class="sidebar-item" (click)="scrollTo(education)">
 			<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">education</h2>
 		</li>
