@@ -39,11 +39,11 @@
 			<h2 class="sidebar-item-tooltip">email</h2>
 			<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
 		</li>
-		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
+		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'" (click)="goTo('https://github.com/3ximus')">
 			<h2 class="sidebar-item-tooltip">github</h2>
 			<fa-icon [icon]="['fab', 'github']"></fa-icon>
 		</li>
-		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
+		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
 			<h2 class="sidebar-item-tooltip">linked-in</h2>
 			<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
 		</li>

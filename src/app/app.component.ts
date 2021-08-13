@@ -31,4 +31,8 @@ export class AppComponent {
         );
     }
 
+    goTo(url: string) {
+        window.open(url);
+    }
+
 }

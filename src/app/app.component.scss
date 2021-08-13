@@ -69,3 +69,9 @@
 		color: $light_color;
 	}
 }
+
+@media screen and (max-width: 1580px) {
+	.sidebar {
+		display: none;
+	}
+}
