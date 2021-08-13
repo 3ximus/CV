@@ -3,6 +3,7 @@
 :host {
     display: block;
     height: 100vh;
+    color: $light_color;
 }
 
 .title {
@@ -27,8 +28,6 @@
     top: 150px;
     left: 200px;
     height: 700px;
-    // max-width: 80vw;
-    // object-fit: cover;
 }
 
 .DELETEME {
@@ -39,7 +38,7 @@
     position: absolute;
     top: 0;
     left: 45vw;
-    height: 100vh;
-    width: 670px;
-    background-color: $gold_color;
+    height: 120vh;
+    width: 662px;
+    background-color: $dark_color;
 }

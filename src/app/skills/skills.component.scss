@@ -3,11 +3,13 @@
 :host {
     display: block;
     height: 100vh;
+    color: $light_color;
+    background-color: $dark_color;
 }
 
 .title {
     position: relative;
-    top: 40px;
+    top: 100px;
     left: 10vw;
     width: 950px;
     font-size: 100px;
