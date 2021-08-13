@@ -2,6 +2,8 @@
 
 :host {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     color: $light_color;
     background-color: $dark_color;
@@ -9,10 +11,10 @@
 
 .title {
     position: relative;
-    top: 100px;
+    top: 40px;
     left: 10vw;
     width: 950px;
-    font-size: 100px;
+    font-size: 80px;
     font-family: 'title';
 }
 

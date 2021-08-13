@@ -7,27 +7,26 @@
 }
 
 .title {
-    position: relative;
+    position: absolute;
     top: 80px;
-    left: 50vw;
-    width: 470px;
-    font-size: 100px;
+    left: 53vw;
+    font-size: 80px;
     font-family: 'title';
 }
 
 .description {
     position: absolute;
-    top: 450px;
-    left: 50vw;
-    font-size: 70px;
+    top: 380px;
+    left: 53vw;
+    line-height: 1.7;
+    font-size: 55px;
     font-family: 'body';
 }
 
 .profile-picture {
-    position: absolute;
-    left: 200px;
-    height: 700px;
+    margin-left: 100px;
     max-height: 100vh;
+    object-fit: cover;
 }
 
 .DELETEME {
@@ -37,8 +36,17 @@
 .block {
     position: absolute;
     top: 0;
-    left: 45vw;
+    left: 50vw;
     height: 100vh;
-    width: 662px;
+    width: 600px;
     background-color: $dark_color;
+}
+
+@media screen and (max-width: 1080px) {
+    .title {
+        font-size: 65px;
+    }
+    .description {
+        font-size: 40px;
+    }
 }
