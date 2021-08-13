@@ -16,8 +16,8 @@ export class AppComponent {
 
     @HostListener("window:scroll", ["$event"])
     onWindowScroll(event:Event){
-        this.page = Math.floor((window.scrollY + 100) / (this.getDocumentHeight() / this.NUMBER_OF_PAGES) + 1);
-        console.log(this.page);
+        const pageHeight = this.getDocumentHeight() / this.NUMBER_OF_PAGES;
+        this.page = Math.floor((window.scrollY + pageHeight/2) / pageHeight + 1);
     }
 
     // helper function to get the correct document height

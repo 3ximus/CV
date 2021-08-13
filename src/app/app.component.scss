@@ -27,6 +27,7 @@
 		flex-direction: row;
 		align-items: center;
 		cursor: pointer;
+		transition: color .4s;
 		& fa-icon {
 			font-size: 25px;
 			width: 30px;
@@ -48,6 +49,9 @@
 		}
 		&.selected {
 			color: $red_color;
+		}
+		&.dark:not(.selected) {
+			color: $light_color;
 		}
 	}
 }

@@ -12,38 +12,38 @@
 
 <div class="sidebar">
 	<ul class="sidebar-list index">
-		<li class="sidebar-item" [class]="page == 1 ? 'selected' : ''" (click)="scrollTo(home)">
+		<li class="sidebar-item" [class]="(page == 1 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(home)">
 			<fa-icon [icon]="['fas', 'home']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">home</h2>
 		</li>
-		<li class="sidebar-item" [class]="page == 2 ? 'selected' : ''" (click)="scrollTo(skills)">
+		<li class="sidebar-item" [class]="(page == 2 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(skills)">
 			<fa-icon [icon]="['fas', 'tools']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">skills</h2>
 		</li>
-		<li class="sidebar-item" [class]="page == 3 ? 'selected' : ''"  (click)="scrollTo(experience)">
+		<li class="sidebar-item" [class]="(page == 3 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(experience)">
 			<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">experience</h2>
 		</li>
-		<li class="sidebar-item" [class]="page == 4 ? 'selected' : ''"  (click)="scrollTo(education)">
+		<li class="sidebar-item" [class]="(page == 4 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(education)">
 			<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">education</h2>
 		</li>
-		<li class="sidebar-item" [class]="page == 5 ? 'selected' : ''"  (click)="scrollTo(about)">
+		<li class="sidebar-item" [class]="(page == 5 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(about)">
 			<fa-icon [icon]="['fas', 'user']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">about</h2>
 		</li>
 	</ul>
 
 	<ul class="sidebar-list contacts">
-		<li class="sidebar-item">
+		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
 			<h2 class="sidebar-item-tooltip">email</h2>
 			<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
 		</li>
-		<li class="sidebar-item">
+		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
 			<h2 class="sidebar-item-tooltip">github</h2>
 			<fa-icon [icon]="['fab', 'github']"></fa-icon>
 		</li>
-		<li class="sidebar-item">
+		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
 			<h2 class="sidebar-item-tooltip">linked-in</h2>
 			<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
 		</li>
