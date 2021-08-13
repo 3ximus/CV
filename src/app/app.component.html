@@ -12,42 +12,42 @@
 
 <div class="sidebar">
 	<ul class="sidebar-list index">
-		<li class="sidebar-item" [class]="(page == 1 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(home)">
+		<li class="sidebar-item" [class]="(page == 1 ? 'selected' : '') +' ' + (indexItemsOnPage[0] % 2 ? '' : 'dark')" (click)="scrollTo(home)">
 			<fa-icon [icon]="['fas', 'home']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">home</h2>
 		</li>
-		<li class="sidebar-item" [class]="(page == 2 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(skills)">
+		<li class="sidebar-item" [class]="(page == 2 ? 'selected' : '') +' ' + (indexItemsOnPage[1] % 2 ? '' : 'dark')" (click)="scrollTo(skills)">
 			<fa-icon [icon]="['fas', 'tools']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">skills</h2>
 		</li>
-		<li class="sidebar-item" [class]="(page == 3 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(experience)">
+		<li class="sidebar-item" [class]="(page == 3 ? 'selected' : '') +' ' + (indexItemsOnPage[2] % 2 ? '' : 'dark')" (click)="scrollTo(experience)">
 			<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">experience</h2>
 		</li>
-		<li class="sidebar-item" [class]="(page == 4 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(education)">
+		<li class="sidebar-item" [class]="(page == 4 ? 'selected' : '') +' ' + (indexItemsOnPage[3] % 2 ? '' : 'dark')" (click)="scrollTo(education)">
 			<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">education</h2>
 		</li>
-		<li class="sidebar-item" [class]="(page == 5 ? 'selected' : '') +' ' + (page % 2 ? '' : 'dark')" (click)="scrollTo(about)">
+		<li class="sidebar-item" [class]="(page == 5 ? 'selected' : '') +' ' + (indexItemsOnPage[4] % 2 ? '' : 'dark')" (click)="scrollTo(about)">
 			<fa-icon [icon]="['fas', 'user']"></fa-icon>
 			<h2 class="sidebar-item-tooltip">about</h2>
 		</li>
 	</ul>
 
 	<ul class="sidebar-list contacts">
-		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'">
+		<li class="sidebar-item" [class]="indexItemsOnPage[1] % 2 ? '' : 'dark'">
 			<h2 class="sidebar-item-tooltip">email</h2>
 			<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
 		</li>
-		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'" (click)="goTo('https://github.com/3ximus')">
+		<li class="sidebar-item" [class]="indexItemsOnPage[2] % 2 ? '' : 'dark'" (click)="goTo('https://github.com/3ximus')">
 			<h2 class="sidebar-item-tooltip">github</h2>
 			<fa-icon [icon]="['fab', 'github']"></fa-icon>
 		</li>
-		<li class="sidebar-item" [class]="page % 2 ? '' : 'dark'" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
+		<li class="sidebar-item" [class]="indexItemsOnPage[3] % 2 ? '' : 'dark'" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
 			<h2 class="sidebar-item-tooltip">linked-in</h2>
 			<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
 		</li>
 	</ul>
 </div>
 
-<p class="scroll-arrow" [class]="pageScrolled % 2 ? 'dark' : ''" *ngIf="page != NUMBER_OF_PAGES">&gt;</p>
+<p class="scroll-arrow" [class]="arrowScrollPage % 2 ? 'dark' : ''" *ngIf="page != NUMBER_OF_PAGES">&gt;</p>
