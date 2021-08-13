@@ -50,4 +50,4 @@
 	</ul>
 </div>
 
-<p class="scroll-arrow" [class]="arrowScrollPage % 2 ? 'dark' : ''" *ngIf="page != NUMBER_OF_PAGES">&gt;</p>
+<p class="scroll-arrow" [class]="(arrowScrollPage != 0 && arrowScrollPage % 2 == 0) ? '' : 'dark'" *ngIf="page != NUMBER_OF_PAGES">&gt;</p>

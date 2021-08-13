@@ -19,7 +19,7 @@ export class AppComponent {
     @HostListener("window:scroll", ["$event"])
     onWindowScroll(event:Event){
         const pageHeight = this.getDocumentHeight() / this.NUMBER_OF_PAGES;
-        this.arrowScrollPage = Math.floor((window.scrollY - 50) / pageHeight + 1);
+        this.arrowScrollPage = Math.floor((window.scrollY - 70) / pageHeight + 1);
         this.indexItemsOnPage[0] = Math.floor((window.scrollY + pageHeight/2 - 140) / pageHeight + 1);
         this.indexItemsOnPage[1] = Math.floor((window.scrollY + pageHeight/2 - 70) / pageHeight + 1);
         this.page = this.indexItemsOnPage[2] = Math.floor((window.scrollY + pageHeight/2) / pageHeight + 1);
