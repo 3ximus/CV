@@ -3,6 +3,7 @@
 :host {
     display: flex;
     height: 100vh;
+    min-height: 900px;
     color: $light_color;
 }
 
@@ -26,6 +27,7 @@
 .profile-picture {
     margin-left: 100px;
     max-height: 100vh;
+    min-height: 900px;
     object-fit: cover;
 }
 
@@ -38,6 +40,7 @@
     top: 0;
     left: 47vw;
     height: 100vh;
+    min-height: 900px;
     width: 675px;
     background-color: $dark_color;
 }

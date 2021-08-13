@@ -3,6 +3,7 @@
 :host {
     display: flex;
     height: 100vh;
+    min-height: 1080px;
     color: $light_color;
     background-color: $dark_color;
 }
