@@ -1,0 +1,21 @@
+@import '~src/colors';
+
+:host {
+    display: block;
+    height: 100vh;
+}
+
+.title {
+    position: relative;
+    top: 40px;
+    left: 10vw;
+    width: 950px;
+    font-size: 100px;
+    font-family: 'title';
+}
+
+@media screen and (max-width: 1080px) {
+    .title {
+        width: 610px;
+    }
+}
