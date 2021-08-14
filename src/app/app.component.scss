@@ -5,9 +5,17 @@
 	position: fixed;
 	top: 0;
 	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
 	margin-right: 30px;
-	&-list.contacts {
-		bottom: 0;
+	&-section {
+		display: flex;
+		flex-direction: column;
+		&.contacts {
+			flex-direction: column-reverse;
+		}
 	}
 	&-item {
 		display: flex;
@@ -30,7 +38,6 @@
 		&:hover > .sidebar-item-tooltip {
 			opacity: 1;
 		}
-
 		&:hover > fa-icon {
 			font-size: 30px;
 		}
@@ -40,6 +47,21 @@
 		&.dark:not(.selected) {
 			color: $light_color;
 		}
+	}
+	&-list:hover + .sidebar-tooltip {
+		opacity: 1;
+	}
+	&-tooltip {
+		margin-right: 6px;
+		font-family: 'body';
+		font-size: 20px;
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		opacity: 0;
+		transition: opacity .4s;
+	}
+	&-spacer {
+		height: 100%;
 	}
 }
 
@@ -59,7 +81,7 @@
 }
 
 @media screen and (max-width: 1580px) {
-	.sidebar {
-		display: none;
-	}
+	// .sidebar {
+	// 	display: none;
+	// }
 }

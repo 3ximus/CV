@@ -11,43 +11,50 @@
 <app-about></app-about>
 
 <div class="sidebar">
-	<ul class="sidebar-list index">
-		<li class="sidebar-item" [class]="(page == 1 ? 'selected' : '') +' ' + (indexItemsOnPage[0] % 2 ? '' : 'dark')" (click)="scrollTo(home)">
-			<h2 class="sidebar-item-tooltip">home</h2>
-			<fa-icon [icon]="['fas', 'home']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="(page == 2 ? 'selected' : '') +' ' + (indexItemsOnPage[1] % 2 ? '' : 'dark')" (click)="scrollTo(skills)">
-			<h2 class="sidebar-item-tooltip">skills</h2>
-			<fa-icon [icon]="['fas', 'tools']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="(page == 3 ? 'selected' : '') +' ' + (indexItemsOnPage[2] % 2 ? '' : 'dark')" (click)="scrollTo(experience)">
-			<h2 class="sidebar-item-tooltip">experience</h2>
-			<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="(page == 4 ? 'selected' : '') +' ' + (indexItemsOnPage[3] % 2 ? '' : 'dark')" (click)="scrollTo(education)">
-			<h2 class="sidebar-item-tooltip">education</h2>
-			<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="(page == 5 ? 'selected' : '') +' ' + (indexItemsOnPage[4] % 2 ? '' : 'dark')" (click)="scrollTo(about)">
-			<h2 class="sidebar-item-tooltip">about</h2>
-			<fa-icon [icon]="['fas', 'user']"></fa-icon>
-		</li>
-	</ul>
+	<div class="sidebar-section index">
+		<ul class="sidebar-list index">
+			<li class="sidebar-item" [class]="(page == 1 ? 'selected' : '') +' ' + (indexItemsOnPage[0] % 2 ? '' : 'dark')" (click)="scrollTo(home)">
+				<h2 class="sidebar-item-tooltip">home</h2>
+				<fa-icon [icon]="['fas', 'home']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="(page == 2 ? 'selected' : '') +' ' + (indexItemsOnPage[1] % 2 ? '' : 'dark')" (click)="scrollTo(skills)">
+				<h2 class="sidebar-item-tooltip">skills</h2>
+				<fa-icon [icon]="['fas', 'tools']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="(page == 3 ? 'selected' : '') +' ' + (indexItemsOnPage[2] % 2 ? '' : 'dark')" (click)="scrollTo(experience)">
+				<h2 class="sidebar-item-tooltip">experience</h2>
+				<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="(page == 4 ? 'selected' : '') +' ' + (indexItemsOnPage[3] % 2 ? '' : 'dark')" (click)="scrollTo(education)">
+				<h2 class="sidebar-item-tooltip">education</h2>
+				<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="(page == 5 ? 'selected' : '') +' ' + (indexItemsOnPage[4] % 2 ? '' : 'dark')" (click)="scrollTo(about)">
+				<h2 class="sidebar-item-tooltip">about</h2>
+				<fa-icon [icon]="['fas', 'user']"></fa-icon>
+			</li>
+		</ul>
+		<h1 class="sidebar-tooltip index">index</h1>
+	</div>
+	<div class="sidebar-spacer"></div>
 
-	<ul class="sidebar-list contacts">
-		<li class="sidebar-item" [class]="indexItemsOnPage[1] % 2 ? '' : 'dark'">
-			<h2 class="sidebar-item-tooltip">email</h2>
-			<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="indexItemsOnPage[2] % 2 ? '' : 'dark'" (click)="goTo('https://github.com/3ximus')">
-			<h2 class="sidebar-item-tooltip">github</h2>
-			<fa-icon [icon]="['fab', 'github']"></fa-icon>
-		</li>
-		<li class="sidebar-item" [class]="indexItemsOnPage[3] % 2 ? '' : 'dark'" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
-			<h2 class="sidebar-item-tooltip">linked-in</h2>
-			<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
-		</li>
-	</ul>
+	<div class="sidebar-section contacts">
+		<ul class="sidebar-list contacts">
+			<li class="sidebar-item" [class]="indexItemsOnPage[1] % 2 ? '' : 'dark'">
+				<h2 class="sidebar-item-tooltip">email</h2>
+				<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="indexItemsOnPage[2] % 2 ? '' : 'dark'" (click)="goTo('https://github.com/3ximus')">
+				<h2 class="sidebar-item-tooltip">github</h2>
+				<fa-icon [icon]="['fab', 'github']"></fa-icon>
+			</li>
+			<li class="sidebar-item" [class]="indexItemsOnPage[3] % 2 ? '' : 'dark'" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
+				<h2 class="sidebar-item-tooltip">linked-in</h2>
+				<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
+			</li>
+		</ul>
+		<h1 class="sidebar-tooltip contacts">contacts</h1>
+	</div>
 </div>
 
 <p class="scroll-arrow" [class]="arrowScrollPage % 2 ? 'dark' : ''" *ngIf="page != NUMBER_OF_PAGES">&gt;</p>
