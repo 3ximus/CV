@@ -5,43 +5,28 @@
 	@include section('light');
 }
 
-.title {
-	position: absolute;
-	top: 80px;
-	left: 53vw;
-	font-size: 80px;
-	font-family: 'title';
-}
-
-.description {
-	position: absolute;
-	top: 380px;
-	left: 53vw;
-	line-height: 1.7;
-	font-size: 55px;
-	font-family: 'body';
-}
-
 .profile-picture {
-	margin-left: 100px;
-	max-height: 100vh;
-	min-height: 900px;
+	position: absolute;
+	margin-top: 50px;
+	width: 30vw;
+	left: 35vw;
 	object-fit: cover;
 }
 
-.DELETEME {
-	color: $red_color;
+.content {
+	z-index: 1;
+	line-height: 1.5;
+	.title {
+		font-family: 'title';
+		font-size: 80px;
+	}
+
+	.description {
+		font-family: 'body';
+		font-size: 55px;
+	}
 }
 
-.block {
-	position: absolute;
-	top: 0;
-	left: 47%;
-	min-height: 1080px;
-	width: 675px;
-	max-width: 53%;
-	background-color: $dark_color;
-}
 
 @media screen and (max-width: 1080px) {
 	.title {
