@@ -1,9 +1,10 @@
 @import '~src/colors';
 
-body {
+body, html {
     background-color: $light_color;
     color: $dark_color;
     margin: 0;
+    width: 100%;
 }
 
 @font-face {

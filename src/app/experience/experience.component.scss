@@ -1,22 +1,23 @@
 @import '~src/colors';
 
 :host {
-    display: flex;
-    height: 100vh;
-    min-height: 1080px;
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	min-height: 1080px;
 }
 
 .title {
-    position: relative;
-    top: 40px;
-    left: 10vw;
-    width: 950px;
-    font-size: 80px;
-    font-family: 'title';
+	position: relative;
+	top: 40px;
+	left: 10vw;
+	width: 950px;
+	font-size: 80px;
+	font-family: 'title';
 }
 
 @media screen and (max-width: 1080px) {
-    .title {
-        width: 610px;
-    }
+	.title {
+		width: 610px;
+	}
 }
