@@ -54,11 +54,14 @@
 	&-tooltip {
 		margin-right: 6px;
 		font-family: 'body';
-		font-size: 20px;
+		font-size: 23px;
 		writing-mode: vertical-rl;
 		text-orientation: upright;
 		opacity: 0;
 		transition: opacity .4s;
+		&.dark {
+			color: $light_color;
+		}
 	}
 	&-spacer {
 		height: 100%;

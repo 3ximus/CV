@@ -1,15 +1,24 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
     NUMBER_OF_PAGES:number = 5;
-    page : number = 1;
-    indexItemsOnPage : number[] = Array(this.NUMBER_OF_PAGES).fill(1); // this is used to control index highlight
-    arrowScrollPage : number = 1; // this is used to control
+    currentPage : number = 1; // this is used to control selected index color
+    sidebarLinkController: string[] = Array(99).fill(''); // this is used to control sidebar link color (contains the class name to be used)
+    sidebarTooltipController: string[] = Array(2).fill('');
+    arrowPageController: string = ''; // this is used to control scroll indicator color
+
+    @ViewChildren('sidebarLink') links!: QueryList<ElementRef>;
+    @ViewChildren('sidebarTooltip') tooltips!: QueryList<ElementRef>;
+    @ViewChild('scrollArrow') scrollArrow!: ElementRef;
+
+    ngAfterViewInit(): void {
+        this.sidebarLinkController =  Array(this.links.length).fill('');
+    }
 
     scrollTo(el : HTMLElement) {
         const y: number = el.getBoundingClientRect().top + window.pageYOffset;
@@ -19,12 +28,22 @@ export class AppComponent {
     @HostListener("window:scroll", ["$event"])
     onWindowScroll(event:Event){
         const pageHeight = this.getDocumentHeight() / this.NUMBER_OF_PAGES;
-        this.arrowScrollPage = Math.floor((window.scrollY - 70) / pageHeight + 1);
-        this.indexItemsOnPage[0] = Math.floor((window.scrollY + pageHeight/2 - 140) / pageHeight + 1);
-        this.indexItemsOnPage[1] = Math.floor((window.scrollY + pageHeight/2 - 70) / pageHeight + 1);
-        this.page = this.indexItemsOnPage[2] = Math.floor((window.scrollY + pageHeight/2) / pageHeight + 1);
-        this.indexItemsOnPage[3] = Math.floor((window.scrollY + pageHeight/2 + 70) / pageHeight + 1);
-        this.indexItemsOnPage[4] = Math.floor((window.scrollY + pageHeight/2 + 140) / pageHeight + 1);
+        this.currentPage = Math.floor((window.scrollY + pageHeight/2) / pageHeight); // middle of the page
+
+        // color scroll arrow
+        if (this.scrollArrow)
+            // use clientWidth because element is rotated
+            this.arrowPageController = Math.floor((window.scrollY + this.scrollArrow.nativeElement.getBoundingClientRect().top + this.scrollArrow.nativeElement.clientWidth/2) / pageHeight) % 2 ? 'dark' : '';
+
+        // color sidebar elements
+        this.links.forEach((item, i) => { //  set the page that each item is in
+            this.sidebarLinkController[i] = Math.floor((window.scrollY + item.nativeElement.getBoundingClientRect().top + item.nativeElement.clientHeight/2) / pageHeight) % 2 ? 'dark' : '';
+        });
+
+        // color sidebar tooltips
+        this.tooltips.forEach((item, i) => {
+            this.sidebarTooltipController[i] = Math.floor((window.scrollY + item.nativeElement.getBoundingClientRect().top + item.nativeElement.clientHeight/2) / pageHeight) % 2 ? 'dark' : '';
+        });
     }
 
     // helper function to get the correct document height
