@@ -1,0 +1,17 @@
+@import '~src/colors';
+
+@mixin section($theme) {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: 100vh;
+	width: 100%;
+	min-height: 1080px;
+	@if $theme == 'dark' {
+		color: $light_color;
+		background-color: $dark_color;
+	} @else {
+		color: $dark_color;
+		background-color: $light_color;
+	}
+}

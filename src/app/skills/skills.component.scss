@@ -1,13 +1,8 @@
 @import '~src/colors';
+@import '~src/globals';
 
 :host {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	min-height: 1080px;
-	width: 100%;
-	color: $light_color;
-	background-color: $dark_color;
+	@include section('dark');
 }
 
 .title {

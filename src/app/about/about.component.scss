@@ -1,10 +1,8 @@
 @import '~src/colors';
+@import '~src/globals';
 
 :host {
-	display: flex;
-	height: 100vh;
-	width: 100%;
-	min-height: 1080px;
+	@include section('light');
 }
 
 .title {

@@ -1,12 +1,8 @@
 @import '~src/colors';
+@import '~src/globals';
 
 :host {
-	display: flex;
-	height: 100vh;
-	width: 100%;
-	min-height: 900px;
-	margin: 0;
-	color: $light_color;
+	@include section('light');
 }
 
 .title {
@@ -41,8 +37,7 @@
 	position: absolute;
 	top: 0;
 	left: 47%;
-	height: 100vh;
-	min-height: 900px;
+	min-height: 1080px;
 	width: 675px;
 	max-width: 53%;
 	background-color: $dark_color;
