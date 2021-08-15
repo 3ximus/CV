@@ -15,3 +15,12 @@
 		background-color: $light_color;
 	}
 }
+
+@mixin section-title() {
+	position: relative;
+	top: 40px;
+	left: 10vw;
+	width: 950px;
+	font-size: 80px;
+	font-family: 'title';
+}
