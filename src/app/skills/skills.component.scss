@@ -13,11 +13,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 30px;
 	&-list {
 		columns: 3;
-		column-gap: 250px;
+		column-gap: 10vw;
 		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 	&-item {
 		-webkit-column-break-inside: avoid;
@@ -29,7 +30,7 @@
 		padding: 0;
 		font-family: 'body';
 		font-size: 35px;
-		line-height: 4.4;
+		line-height: 140px;
 	}
 	&-level {
 		position: relative;
@@ -38,7 +39,7 @@
 		width: 100%;
 		height: 10px;
 		background-color: #444;
-		margin-top: -45px;
+		margin-top: -40px;
 		&::after {
 			content: '';
 			position: absolute;
@@ -63,25 +64,30 @@
 }
 
 
-@media screen and (max-width: 1080px) {
-	.title {
-		width: 610px;
-	}
+@media screen and (max-width: 1415px) {
 	.skills {
+		margin-top: -20px;
 		&-list {
 			columns: 2;
-			column-gap: 200px;
+			column-gap: 20vw;
 		}
 
 		&-title {
 			font-size: 30px;
-			line-height: 4;
+			line-height: 115px;
 		}
 		&-level {
 			margin-top: -35px;
 		}
 	}
+}
+
+@media screen and (max-width: 1080px) {
+	.title {
+		width: 610px;
+	}
 	.justified-container {
+		margin-right: 100px;
 		#github-banner {
 			font-size: 35px;
 			&::before {

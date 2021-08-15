@@ -17,9 +17,8 @@
 }
 
 @mixin section-title() {
-	position: relative;
-	top: 40px;
-	left: 10vw;
+	margin-left: 10vw;
+	margin-bottom: 4vh;
 	width: 950px;
 	font-size: 80px;
 	font-family: 'title';
