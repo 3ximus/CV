@@ -11,7 +11,8 @@
 <app-about></app-about>
 
 <div class="sidebar">
-	<div class="sidebar-section index">
+	<fa-icon class="sidebar-toggle-button" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()" [icon]="['fas', 'home']"></fa-icon>
+	<div #sidebarSection class="sidebar-section index" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list index">
 			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 0 ? 'selected' : '') +' '+ (sidebarLinkController[0])" (click)="scrollTo(home)">
 				<h2 class="sidebar-item-tooltip">home</h2>
@@ -36,9 +37,8 @@
 		</ul>
 		<h1 #sidebarTooltip class="sidebar-tooltip index" [class]="sidebarTooltipController[0]">index</h1>
 	</div>
-	<div class="sidebar-spacer"></div>
 
-	<div class="sidebar-section contacts">
+	<div #sidebarSection class="sidebar-section contacts" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list contacts">
 			<li #sidebarLink class="sidebar-item" [class]="sidebarLinkController[5]">
 				<h2 class="sidebar-item-tooltip">email</h2>
@@ -56,5 +56,6 @@
 		<h1 #sidebarTooltip class="sidebar-tooltip contacts" [class]="sidebarTooltipController[1]">contacts</h1>
 	</div>
 </div>
+<div class="sidebar-scrim" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()"></div>
 
-<p #scrollArrow class="scroll-arrow" [class]="arrowPageController" *ngIf="currentPage != NUMBER_OF_PAGES">&gt;</p>
+<p #scrollArrow class="scroll-arrow" [class]="arrowPageController" *ngIf="currentPage != NUMBER_OF_PAGES-1">&gt;</p>

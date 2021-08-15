@@ -12,17 +12,24 @@ export class AppComponent implements AfterViewInit {
     sidebarTooltipController: string[] = Array(2).fill('');
     arrowPageController: string = ''; // this is used to control scroll indicator color
 
-    @ViewChildren('sidebarLink') links!: QueryList<ElementRef>;
-    @ViewChildren('sidebarTooltip') tooltips!: QueryList<ElementRef>;
+    isSidebarOpen: boolean = false;
+
+    @ViewChildren('sidebarSection') sidebarSections!: ElementRef;
+    @ViewChildren('sidebarLink') sidebarLinks!: QueryList<ElementRef>;
+    @ViewChildren('sidebarTooltip') sidebarTooltips!: QueryList<ElementRef>;
     @ViewChild('scrollArrow') scrollArrow!: ElementRef;
 
     ngAfterViewInit(): void {
-        this.sidebarLinkController =  Array(this.links.length).fill('');
+        this.sidebarLinkController =  Array(this.sidebarLinks.length).fill('');
     }
 
     scrollTo(el : HTMLElement) {
         const y: number = el.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({top: y, behavior: 'smooth'});
+    }
+
+    sideBarToggle() {
+        this.isSidebarOpen = !this.isSidebarOpen;
     }
 
     @HostListener("window:scroll", ["$event"])
@@ -36,12 +43,12 @@ export class AppComponent implements AfterViewInit {
             this.arrowPageController = Math.floor((window.scrollY + this.scrollArrow.nativeElement.getBoundingClientRect().top + this.scrollArrow.nativeElement.clientWidth/2) / pageHeight) % 2 ? 'dark' : '';
 
         // color sidebar elements
-        this.links.forEach((item, i) => { //  set the page that each item is in
+        this.sidebarLinks.forEach((item, i) => { //  set the page that each item is in
             this.sidebarLinkController[i] = Math.floor((window.scrollY + item.nativeElement.getBoundingClientRect().top + item.nativeElement.clientHeight/2) / pageHeight) % 2 ? 'dark' : '';
         });
 
         // color sidebar tooltips
-        this.tooltips.forEach((item, i) => {
+        this.sidebarTooltips.forEach((item, i) => {
             this.sidebarTooltipController[i] = Math.floor((window.scrollY + item.nativeElement.getBoundingClientRect().top + item.nativeElement.clientHeight/2) / pageHeight) % 2 ? 'dark' : '';
         });
     }

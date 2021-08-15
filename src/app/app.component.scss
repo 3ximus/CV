@@ -1,19 +1,20 @@
 @import '~src/colors';
 
 .sidebar {
-	z-index: 10;
-	position: fixed;
-	top: 0;
-	right: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100vh;
-	margin-right: 30px;
 	&-section {
+		position: fixed;
+		right: 0;
+		padding-right: 30px;
+		width: 250px;
 		display: flex;
 		flex-direction: column;
+		&.index {
+			z-index: 50;
+			top: 0;
+		}
 		&.contacts {
+			z-index: 49;
+			bottom: 0;
 			flex-direction: column-reverse;
 		}
 	}
@@ -63,8 +64,29 @@
 			color: $light_color;
 		}
 	}
-	&-spacer {
-		height: 100%;
+
+	&-toggle-button { // sidebar hide/show button
+		z-index: 11;
+		position: fixed;
+		top: 0;
+		right: 0;
+		font-size: 25px;
+		margin-top: 20px;
+		margin-right: 35px;
+		display: none;
+		cursor: pointer;
+	}
+	&-scrim {
+		z-index: 45;
+		position: fixed;
+		width: 100vh;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: none;
+		&.open {
+			display: inherit;
+		}
 	}
 }
 
@@ -83,8 +105,26 @@
 	}
 }
 
-@media screen and (max-width: 1580px) {
-	// .sidebar {
-	// 	display: none;
-	// }
+@media screen and (max-width: 1090px) {
+	.sidebar {
+		&-section {
+			top: 70px;
+			right: -300px;
+			background-color: $dark_color;
+			color: $light_color;
+			transition: right .5s;
+			&.open {
+				right: 0;
+			}
+		}
+		&-item-tooltip {
+			opacity: 1;
+		}
+		&-tooltip {
+			display: none;
+		}
+		&-toggle-button {
+			display: inherit;
+		}
+	}
 }
