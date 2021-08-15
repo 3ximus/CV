@@ -9,24 +9,78 @@
 	position: absolute;
 	margin-top: 50px;
 	width: 30vw;
+	min-width: 400px;
 	left: 35vw;
 	object-fit: cover;
 }
 
+
 .content {
 	z-index: 1;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin-left: 4vw;
+	margin-bottom: 100px;
 	line-height: 1.5;
 	.title {
 		font-family: 'title';
-		font-size: 80px;
+		font-size: 90px;
+		&-highlight {
+			background-color: $red_color;
+			color: $light_color;
+		}
 	}
 
 	.description {
-		font-family: 'body';
-		font-size: 55px;
+		font-family: 'term';
+		font-size: 45px;
+		p {
+			margin: 0;
+		}
+		&-highlight {
+			background-color: $dark_color;
+			color: $light_color;
+		}
+
+		overflow: hidden;
+		white-space: nowrap;
+		margin: 0 auto;
+		$widths : 405px, 452px, 709px; // width of the paragraphs
+		&.line1 {
+			width: 0px;
+			animation:
+				typing-#{nth($widths, 1)} .4s steps(17, end) forwards,
+				blink-caret .4s step-end forwards;
+		}
+		&.line2 {
+			width: 0px;
+			animation:
+				typing-#{nth($widths, 2)} .5s steps(19, end) forwards,
+				blink-caret .5s step-end forwards;
+			animation-delay: .4s;
+		}
+		&.line3 {
+			width: 0px;
+			animation:
+				typing-#{nth($widths, 3)} .8s steps(30, end) forwards,
+				blink-caret .8s step-end forwards;
+				animation-delay: .9s;
+		}
+		@for $i from 1 through length($widths) {
+			@keyframes typing-#{nth($widths, $i)} {
+				from { width: 0px }
+				to { width: nth($widths, $i) }
+			}
+		}
+
+		@keyframes blink-caret {
+			from { border-color: $dark_color; border-right: 30px solid $dark_color; }
+			to { border-color: transparent }
+		}
+
 	}
 }
-
 
 @media screen and (max-width: 1080px) {
 	.title {

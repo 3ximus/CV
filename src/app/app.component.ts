@@ -7,7 +7,7 @@ import { Component, HostListener, ViewChild, ViewChildren, QueryList, ElementRef
 })
 export class AppComponent implements AfterViewInit {
     NUMBER_OF_PAGES:number = 5;
-    currentPage : number = 1; // this is used to control selected index color
+    currentPage : number = 0; // this is used to control selected index color
     sidebarLinkController: string[] = Array(99).fill(''); // this is used to control sidebar link color (contains the class name to be used)
     sidebarTooltipController: string[] = Array(2).fill('');
     arrowPageController: string = ''; // this is used to control scroll indicator color

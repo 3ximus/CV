@@ -13,23 +13,23 @@
 <div class="sidebar">
 	<div class="sidebar-section index">
 		<ul class="sidebar-list index">
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 1 ? 'selected' : '') +' '+ (sidebarLinkController[0])" (click)="scrollTo(home)">
+			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 0 ? 'selected' : '') +' '+ (sidebarLinkController[0])" (click)="scrollTo(home)">
 				<h2 class="sidebar-item-tooltip">home</h2>
 				<fa-icon [icon]="['fas', 'home']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 2 ? 'selected' : '') +' '+ (sidebarLinkController[1])" (click)="scrollTo(skills)">
+			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 1 ? 'selected' : '') +' '+ (sidebarLinkController[1])" (click)="scrollTo(skills)">
 				<h2 class="sidebar-item-tooltip">skills</h2>
 				<fa-icon [icon]="['fas', 'tools']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 3 ? 'selected' : '') +' '+ (sidebarLinkController[2])" (click)="scrollTo(experience)">
+			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 2 ? 'selected' : '') +' '+ (sidebarLinkController[2])" (click)="scrollTo(experience)">
 				<h2 class="sidebar-item-tooltip">experience</h2>
 				<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 4 ? 'selected' : '') +' '+ (sidebarLinkController[3])" (click)="scrollTo(education)">
+			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 3 ? 'selected' : '') +' '+ (sidebarLinkController[3])" (click)="scrollTo(education)">
 				<h2 class="sidebar-item-tooltip">education</h2>
 				<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 5 ? 'selected' : '') +' '+ (sidebarLinkController[4])" (click)="scrollTo(about)">
+			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 4 ? 'selected' : '') +' '+ (sidebarLinkController[4])" (click)="scrollTo(about)">
 				<h2 class="sidebar-item-tooltip">about</h2>
 				<fa-icon [icon]="['fas', 'user']"></fa-icon>
 			</li>
