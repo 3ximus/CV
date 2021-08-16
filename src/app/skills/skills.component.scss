@@ -13,6 +13,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 	&-list {
 		columns: 3;
 		column-gap: 10vw;
@@ -24,6 +26,7 @@
 		-webkit-column-break-inside: avoid;
 		page-break-inside: avoid;
 		break-inside: avoid;
+		cursor: pointer;
 	}
 	&-title {
 		margin: 0;
@@ -61,6 +64,14 @@
 			content: 'hover ';
 		}
 	}
+}
+
+.backdrop {
+	position: absolute;
+	top: 50vh;
+	left: 0;
+	font-size: 70vw;
+	opacity: 0.04;
 }
 
 

@@ -79,25 +79,26 @@
 	to { border-right: 30px transparent;  }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 820px) {
 	.content {
 		.title {
 			font-size: 10vw;
 		}
 		.description {
 			font-size: 6vw;
-			&.line1 {
-				width: auto;
-				animation: none;
-			}
-			&.line2 {
-				width: auto;
-				animation: none;
-			}
-			&.line3 {
-				width: auto;
-				animation: none;
-			}
+			// TODO DISABLE ANIMATIONS ON SMALL SCREENS?
+			// &.line1 {
+			// 	width: auto;
+			// 	animation: none;
+			// }
+			// &.line2 {
+			// 	width: auto;
+			// 	animation: none;
+			// }
+			// &.line3 {
+			// 	width: auto;
+			// 	animation: none;
+			// }
 		}
 	}
 }
