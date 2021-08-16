@@ -11,7 +11,7 @@
 <app-about></app-about>
 
 <div class="sidebar">
-	<fa-icon class="sidebar-toggle-button" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()" [icon]="['fas', 'home']"></fa-icon>
+	<fa-icon class="sidebar-toggle-button" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()" [icon]="['fas', 'bars']"></fa-icon>
 	<div #sidebarSection class="sidebar-section index" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list index">
 			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 0 ? 'selected' : '') +' '+ (sidebarLinkController[0])" (click)="scrollTo(home)">
