@@ -14,3 +14,65 @@
 		width: 610px;
 	}
 }
+
+.flex-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+$dot_size: 20px;
+$item_width: 10vw;
+
+.list {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	font-family: 'body';
+	font-size: 25px;
+	&-item {
+		position: relative;
+		width: $item_width;
+		&-description {
+			position: relative;
+			&-title {
+				position: absolute;
+				top: -100px;
+				left: 0;
+				transform: rotateZ(-45deg);
+				width: 70px;
+				text-indent: -10px;
+			}
+			&-date {
+				position: absolute;
+				bottom: -50px;
+			}
+		}
+		&-dot {
+			width: $dot_size;
+			height: $dot_size;
+			border-radius: 50%;
+			background-color: $dark_color;
+			&::before, &::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: $dark_color;
+				width: #{$item_width/2};
+				height: 10px;
+			}
+			&::before {
+				left: -#{$item_width/2};
+			}
+			&::after {
+				right: calc(#{$item_width/2} - #{$dot_size});
+			}
+		}
+	}
+}

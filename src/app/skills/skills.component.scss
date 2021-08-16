@@ -106,9 +106,6 @@
 		margin-right: 100px;
 		#github-banner {
 			font-size: 35px;
-			&::before {
-				content: 'click ';
-			}
 		}
 	}
 }
