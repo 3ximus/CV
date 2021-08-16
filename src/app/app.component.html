@@ -1,61 +1,61 @@
 
 <nav #home></nav>
-<app-home></app-home>
+<app-home class="page"></app-home>
 <nav #skills></nav>
-<app-skills></app-skills>
+<app-skills class="page"></app-skills>
 <nav #experience></nav>
-<app-experience></app-experience>
+<app-experience class="page"></app-experience>
 <nav #education></nav>
-<app-education></app-education>
+<app-education class="page"></app-education>
 <nav #about></nav>
-<app-about></app-about>
+<app-about class="page"></app-about>
 
 <div class="sidebar">
-	<fa-icon class="sidebar-toggle-button" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()" [icon]="['fas', 'bars']"></fa-icon>
-	<div #sidebarSection class="sidebar-section index" [class]="isSidebarOpen?'open':''">
+	<fa-icon appColorSwitch class="sidebar-toggle-button" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()" [icon]="['fas', 'bars']"></fa-icon>
+	<div class="sidebar-section index" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list index">
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 0 ? 'selected' : '') +' '+ (sidebarLinkController[0])" (click)="scrollTo(home)">
+			<li appColorSwitch class="sidebar-item" [class]="currentPage == 0 ? 'selected' : ''" (click)="scrollTo(home)">
 				<h2 class="sidebar-item-tooltip">home</h2>
 				<fa-icon [icon]="['fas', 'home']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 1 ? 'selected' : '') +' '+ (sidebarLinkController[1])" (click)="scrollTo(skills)">
+			<li appColorSwitch class="sidebar-item" [class]="currentPage == 1 ? 'selected' : ''" (click)="scrollTo(skills)">
 				<h2 class="sidebar-item-tooltip">skills</h2>
 				<fa-icon [icon]="['fas', 'tools']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 2 ? 'selected' : '') +' '+ (sidebarLinkController[2])" (click)="scrollTo(experience)">
+			<li appColorSwitch class="sidebar-item" [class]="currentPage == 2 ? 'selected' : ''" (click)="scrollTo(experience)">
 				<h2 class="sidebar-item-tooltip">experience</h2>
 				<fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 3 ? 'selected' : '') +' '+ (sidebarLinkController[3])" (click)="scrollTo(education)">
+			<li appColorSwitch class="sidebar-item" [class]="currentPage == 3 ? 'selected' : ''" (click)="scrollTo(education)">
 				<h2 class="sidebar-item-tooltip">education</h2>
 				<fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="(currentPage == 4 ? 'selected' : '') +' '+ (sidebarLinkController[4])" (click)="scrollTo(about)">
+			<li appColorSwitch class="sidebar-item" [class]="currentPage == 4 ? 'selected' : ''" (click)="scrollTo(about)">
 				<h2 class="sidebar-item-tooltip">about</h2>
 				<fa-icon [icon]="['fas', 'user']"></fa-icon>
 			</li>
 		</ul>
-		<h1 #sidebarTooltip class="sidebar-tooltip index" [class]="sidebarTooltipController[0]">index</h1>
+		<h1 appColorSwitch class="sidebar-tooltip index">index</h1>
 	</div>
 
-	<div #sidebarSection class="sidebar-section contacts" [class]="isSidebarOpen?'open':''">
+	<div class="sidebar-section contacts" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list contacts">
-			<li #sidebarLink class="sidebar-item" [class]="sidebarLinkController[5]">
+			<li appColorSwitch class="sidebar-item">
 				<h2 class="sidebar-item-tooltip">email</h2>
 				<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="sidebarLinkController[6]" (click)="goTo('https://github.com/3ximus')">
+			<li appColorSwitch class="sidebar-item" (click)="goTo('https://github.com/3ximus')">
 				<h2 class="sidebar-item-tooltip">github</h2>
 				<fa-icon [icon]="['fab', 'github']"></fa-icon>
 			</li>
-			<li #sidebarLink class="sidebar-item" [class]="sidebarLinkController[7]" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
+			<li appColorSwitch class="sidebar-item" (click)="goTo('https://www.linkedin.com/in/fabio-r/')">
 				<h2 class="sidebar-item-tooltip">linked-in</h2>
 				<fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
 			</li>
 		</ul>
-		<h1 #sidebarTooltip class="sidebar-tooltip contacts" [class]="sidebarTooltipController[1]">contacts</h1>
+		<h1 appColorSwitch class="sidebar-tooltip contacts">contacts</h1>
 	</div>
 </div>
 <div class="sidebar-scrim" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()"></div>
 
-<p #scrollArrow class="scroll-arrow" [class]="arrowPageController" *ngIf="currentPage != NUMBER_OF_PAGES-1">&gt;</p>
+<p appColorSwitch class="scroll-arrow" *ngIf="currentPage != NUMBER_OF_PAGES-1">&gt;</p>

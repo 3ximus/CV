@@ -14,6 +14,7 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import { ParallaxDirective } from './parallax.directive';
 import { AboutComponent } from './about/about.component';
+import { ColorSwitchDirective } from './color-switch.directive';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { AboutComponent } from './about/about.component';
         ExperienceComponent,
         ParallaxDirective,
         AboutComponent,
+        ColorSwitchDirective,
     ],
     imports: [
         BrowserModule,

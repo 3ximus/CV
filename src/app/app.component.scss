@@ -75,6 +75,9 @@
 		margin-right: 35px;
 		display: none;
 		cursor: pointer;
+		&.dark {
+			color: $light_color;
+		}
 	}
 	&-scrim {
 		z-index: 45;
@@ -129,8 +132,3 @@
 	}
 }
 
-@media screen and (max-height: 780px) {
-	.sidebar-tooltip {
-		display: none;
-	}
-}
