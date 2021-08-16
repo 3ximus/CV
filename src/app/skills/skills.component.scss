@@ -47,10 +47,16 @@
 			content: '';
 			position: absolute;
 			background-color: $gold_color;
-			width: var(--value);
+			max-width: var(--value);
+			animation: .5s growSkill steps(40, end) forwards;
 			height: 10px;
 		}
 	}
+}
+
+@keyframes growSkill {
+	from { width: 0%; }
+	to { width: 100%; }
 }
 
 .justified-container {
@@ -60,18 +66,17 @@
 	#github-banner {
 		font-family: 'body2';
 		font-size: 35px;
-		&::before {
-			content: 'hover ';
-		}
 	}
 }
 
 .backdrop {
-	position: absolute;
-	top: 50vh;
-	left: 0;
-	font-size: 70vw;
-	opacity: 0.04;
+	position: relative;
+	height: 0;
+	top: 4%;
+	left: 4%;
+	font-size: 90vh;
+	opacity: 0;
+	transition: opacity .3s;
 }
 
 
