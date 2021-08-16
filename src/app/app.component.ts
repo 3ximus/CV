@@ -1,16 +1,21 @@
-import { Component, HostListener, ViewChild, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, HostListener, AfterViewInit, OnInit } from '@angular/core';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
     NUMBER_OF_PAGES:number = 0;
     currentPage : number = 0; // this is used to control selected index color
     isSidebarOpen: boolean = false;
 
     constructor() {
+    }
+    ngOnInit(): void {
+        AOS.init();
     }
 
     ngAfterViewInit(): void {

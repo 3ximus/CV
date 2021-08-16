@@ -47,10 +47,17 @@
 			content: '';
 			position: absolute;
 			background-color: $gold_color;
-			max-width: var(--value);
-			animation: .5s growSkill steps(40, end) forwards;
+			width: var(--value);
 			height: 10px;
 		}
+	}
+}
+
+[data-aos="growSkill"] {
+	width: 0;
+	transition-property: width;
+	&.aos-animate {
+		width: 100%;
 	}
 }
 
