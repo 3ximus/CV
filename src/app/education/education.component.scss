@@ -21,6 +21,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         position: relative;
         width: 33.333%;
         height: calc(100vh - #{$section_title_height});
@@ -29,7 +30,7 @@
         background-color: $dark_color;
         overflow: hidden;
         transition: width 0.5s ease, background-color .5s;
-        img {
+        .backdrop {
             position: absolute;
             height: calc(100vh - #{$section_title_height});
             opacity: 0;
@@ -37,16 +38,41 @@
         }
         h1 {
             z-index: 5;
+        }
+        h2 {
+            text-align: center;
+            font-size: 17px;
+            z-index: 5;
+        }
+        &-text {
             transition: margin-bottom .5s;
+            &-details {
+                display: flex;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 1s;
+                img {
+                    width: 100px;
+                }
+                #ist_logo {
+                    width: 80px;
+                }
+                #tekever-logo {
+                    width: 140px;
+                }
+            }
         }
         &:hover {
             width: 50% !important;
             background-color: $dark2_color;
-            img {
+            .backdrop {
                 opacity: .1;
             }
-            h1 {
+            .container-item-text {
                 margin-bottom: 400px;
+                &-details {
+                    opacity: 1;
+                }
             }
         }
     }
