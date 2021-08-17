@@ -27,10 +27,27 @@
         font-size: 20px;
         text-transform: uppercase;
         background-color: $dark_color;
-        transition: width 0.5s ease, background-color .5s, color .5s;
+        overflow: hidden;
+        transition: width 0.5s ease, background-color .5s;
+        img {
+            position: absolute;
+            height: calc(100vh - #{$section_title_height});
+            opacity: 0;
+            transition: opacity 1s .2s;
+        }
+        h1 {
+            z-index: 5;
+            transition: margin-bottom .5s;
+        }
         &:hover {
             width: 50% !important;
             background-color: $dark2_color;
+            img {
+                opacity: .1;
+            }
+            h1 {
+                margin-bottom: 400px;
+            }
         }
     }
 }
