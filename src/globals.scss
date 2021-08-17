@@ -1,5 +1,7 @@
 @import '~src/colors';
 
+$section_title_height: 85px;
+
 @mixin section($theme) {
 	display: flex;
 	flex-direction: column;
@@ -21,6 +23,7 @@
 	margin-left: 10vw;
 	margin-bottom: 4vh;
 	width: 950px;
+	height: $section_title_height;
 	font-size: 80px;
 	font-family: 'title';
 }

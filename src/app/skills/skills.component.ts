@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 import { IconDefinition, faGit, faAngular, faPython, faDocker, faSass, faJava } from '@fortawesome/free-brands-svg-icons';
-import {faDatabase, faCopyright, faTerminal, faFileAlt} from '@fortawesome/free-solid-svg-icons';
+import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
 		{ name: "Python"		 , value: 90 , icon: faPython},
 		{ name: "Django"		 , value: 80 , icon: faPython},
 		{ name: "Flask"			 , value: 60 , icon: faPython},
-		{ name: "MongoDB"		 , value: 60 , icon: faDatabase},
+		{ name: "Flutter"		 , value: 60 , icon: faMobileAlt},
 		{ name: "Docker"		 , value: 60 , icon: faDocker},
 		{ name: "SQL"			 , value: 50 , icon: faDatabase},
 		{ name: "Git"			 , value: 90 , icon: faGit},

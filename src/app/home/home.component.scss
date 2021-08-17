@@ -29,6 +29,7 @@
 		&-highlight {
 			background-color: $red_color;
 			color: $light_color;
+			padding: 10px;
 		}
 	}
 
@@ -41,6 +42,7 @@
 		&-highlight {
 			background-color: $dark_color;
 			color: $light_color;
+			padding: 10px;
 		}
 
 		overflow: hidden;

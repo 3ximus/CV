@@ -2,15 +2,41 @@
 @import '~src/globals';
 
 :host {
-	@include section('dark');
+    @include section('dark');
 }
 
 .title {
-	@include section-title();
+    @include section-title();
+}
+
+.container {
+    display: flex;
+    font-family: 'body';
+    &:hover {
+        .tl-item {
+            width: 25%;
+        }
+    }
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 33.333%;
+        height: calc(100vh - #{$section_title_height});
+        font-size: 20px;
+        text-transform: uppercase;
+        background-color: $dark_color;
+        transition: width 0.5s ease, background-color .5s, color .5s;
+        &:hover {
+            width: 50% !important;
+            background-color: $dark2_color;
+        }
+    }
 }
 
 @media screen and (max-width: 1080px) {
-	.title {
-		width: 610px;
-	}
+    .title {
+        width: 610px;
+    }
 }
