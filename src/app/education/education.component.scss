@@ -26,7 +26,6 @@
         width: 33.333%;
         height: calc(100vh - #{$section_title_height});
         font-size: 20px;
-        text-transform: uppercase;
         background-color: $dark_color;
         overflow: hidden;
         transition: width 0.5s ease, background-color .5s;
@@ -37,6 +36,8 @@
             transition: opacity 1s .2s;
         }
         h1 {
+            text-transform: uppercase;
+            text-align: center;
             z-index: 5;
         }
         h2 {
@@ -46,12 +47,17 @@
         }
         &-text {
             transition: margin-bottom .5s;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             &-details {
                 display: flex;
                 justify-content: center;
                 opacity: 0;
                 transition: opacity 1s;
+                height: 100px;
                 img {
+                    object-fit: contain;
                     width: 100px;
                 }
                 #ist_logo {
@@ -61,6 +67,16 @@
                     width: 140px;
                 }
             }
+            &-description {
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                width: 80%;
+                margin-top: 30px;
+                text-align: center;
+                opacity: 0;
+                transition: opacity .2s;
+            }
         }
         &:hover {
             width: 50% !important;
@@ -69,9 +85,13 @@
                 opacity: .1;
             }
             .container-item-text {
-                margin-bottom: 400px;
+                margin-bottom: 300px;
                 &-details {
                     opacity: 1;
+                }
+                &-description {
+                    opacity: 1;
+                    transition: opacity .8s .3s;
                 }
             }
         }
