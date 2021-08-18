@@ -2,117 +2,131 @@
 @import '~src/globals';
 
 :host {
-	@include section('dark');
-}
-
-.title {
-	@include section-title();
+    @include section('dark');
 }
 
 .skills {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
-	z-index: 2;
-	&-list {
-		columns: 3;
-		column-gap: 10vw;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	&-item {
-		-webkit-column-break-inside: avoid;
-		page-break-inside: avoid;
-		break-inside: avoid;
-		cursor: pointer;
-	}
-	&-title {
-		margin: 0;
-		padding: 0;
-		font-family: 'body';
-		font-size: 35px;
-		line-height: 140px;
-	}
-	&-level {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 10px;
-		background-color: #444;
-		margin-top: -40px;
-		&::after {
-			content: '';
-			position: absolute;
-			background-color: $gold_color;
-			width: var(--value);
-			height: 10px;
-		}
-	}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    &-list {
+        columns: 3;
+        column-gap: 10vw;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &-item {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        cursor: pointer;
+    }
+    &-title {
+        margin: 0;
+        padding: 0;
+        font-family: 'body';
+        font-size: 35px;
+        line-height: 140px;
+    }
+    &-level {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #444;
+        margin-top: -40px;
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $gold_color;
+            width: var(--value);
+            height: 10px;
+        }
+    }
 }
 
 [data-aos="growSkill"] {
-	width: 0;
-	transition-property: width;
-	&.aos-animate {
-		width: 100%;
-	}
+    width: 0;
+    transition-property: width;
+    &.aos-animate {
+        width: 100%;
+    }
 }
 
 @keyframes growSkill {
-	from { width: 0%; }
-	to { width: 100%; }
+    from { width: 0%; }
+    to { width: 100%; }
 }
 
 .justified-container {
-	display: flex;
-	justify-content: right;
-	margin-right: 200px;
-	#github-banner {
-		font-family: 'body2';
-		font-size: 35px;
-	}
+    display: flex;
+    justify-content: right;
+    margin-right: 200px;
+    #github-banner {
+        font-family: 'body2';
+        font-size: 35px;
+    }
 }
 
 .backdrop {
-	position: relative;
-	height: 0;
-	top: 4%;
-	left: 4%;
-	font-size: 90vh;
-	opacity: 0;
-	transition: opacity .3s;
+    position: relative;
+    height: 0;
+    top: 4%;
+    left: 4%;
+    font-size: 90vh;
+    opacity: 0;
+    transition: opacity .3s;
 }
 
 
 @media screen and (max-width: 1415px) {
-	.skills {
-		margin-top: -20px;
-		&-list {
-			columns: 2;
-			column-gap: 20vw;
-		}
+    .skills {
+        margin-top: -20px;
+        &-list {
+            columns: 2;
+            column-gap: 20vw;
+        }
 
-		&-title {
-			font-size: 30px;
-			line-height: 115px;
-		}
-		&-level {
-			margin-top: -35px;
-		}
-	}
+        &-title {
+            font-size: 30px;
+            line-height: 115px;
+        }
+        &-level {
+            margin-top: -35px;
+        }
+    }
 }
 
 @media screen and (max-width: 1080px) {
-	.title {
-		width: 610px;
-	}
-	.justified-container {
-		margin-right: 100px;
-		#github-banner {
-			font-size: 35px;
-		}
-	}
+    .justified-container {
+        margin-right: 10vw;
+        #github-banner {
+            font-size: 35px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills {
+        &-list {
+            column-gap: 10vw;
+        }
+
+        &-title {
+            font-size: 5vw;
+            line-height: 115px;
+        }
+        &-level {
+            margin-top: -35px;
+        }
+    }
+    .justified-container {
+        #github-banner {
+            font-size: 6vw;
+        }
+    }
 }

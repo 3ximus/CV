@@ -5,10 +5,6 @@
     @include section('dark');
 }
 
-.title {
-    @include section-title();
-}
-
 .container {
     display: flex;
     font-family: 'body';
@@ -95,11 +91,5 @@
                 }
             }
         }
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .title {
-        width: 610px;
     }
 }

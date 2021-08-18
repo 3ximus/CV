@@ -19,12 +19,17 @@ $section_title_height: 85px;
 	}
 }
 
-@mixin section-title() {
-	margin-left: 10vw;
+.section-title {
+	margin-left: 4vw;
 	margin-bottom: 4vh;
-	width: 950px;
 	height: $section_title_height;
 	font-size: 80px;
 	font-family: 'title';
 	z-index: 10;
+}
+
+@media screen and (max-width: 850px) {
+	.section-title {
+		font-size: 12vw;
+	}
 }

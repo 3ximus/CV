@@ -5,12 +5,3 @@
 	@include section('light');
 }
 
-.title {
-	@include section-title();
-}
-
-@media screen and (max-width: 1080px) {
-	.title {
-		width: 610px;
-	}
-}
