@@ -22,6 +22,7 @@ $section_title_height: 85px;
 .section-title {
 	margin-left: 4vw;
 	margin-bottom: 4vh;
+	margin-top: 4vh;
 	height: $section_title_height;
 	font-size: 80px;
 	font-family: 'title';
@@ -30,6 +31,6 @@ $section_title_height: 85px;
 
 @media screen and (max-width: 850px) {
 	.section-title {
-		font-size: 12vw;
+		font-size: 10vw;
 	}
 }

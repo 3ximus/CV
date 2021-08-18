@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
-import { IconDefinition, faGit, faAngular, faPython, faDocker, faSass, faJava } from '@fortawesome/free-brands-svg-icons';
-import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt} from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faGit, faAngular, faPython, faDocker, faSass, faJava, faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -11,7 +11,8 @@ import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt} from '@fort
 })
 export class SkillsComponent implements OnInit {
 	skills: {name:string, value:number, icon:any}[] = [
-		{ name: "Angular JS"	 , value: 50 , icon: faAngular},
+		{ name: "Angular JS"	 , value: 65 , icon: faAngular},
+		{ name: "JavaScript"	 , value: 60 , icon: faJsSquare},
 		{ name: "Python"		 , value: 90 , icon: faPython},
 		{ name: "Django"		 , value: 80 , icon: faPython},
 		{ name: "Flask"			 , value: 60 , icon: faPython},
