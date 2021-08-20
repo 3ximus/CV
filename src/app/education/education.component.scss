@@ -20,14 +20,14 @@
         flex-direction: column;
         position: relative;
         width: 33.333%;
-        height: calc(100vh - #{$section_title_height} - 8vh); // subtract header height, and margins
+        height: calc(max(100vh, 900px) - #{$section_title_height} - 8vh); // subtract header height, and margins
         font-size: 20px;
         background-color: $dark_color;
         overflow: hidden;
         transition: width 0.5s ease, height 0.5s ease, background-color .5s;
         .backdrop {
             position: absolute;
-            height: calc(100vh - #{$section_title_height} - 8vh);
+            height: calc(max(100vh, 900px) - #{$section_title_height} - 8vh);
             opacity: 0;
             transition: opacity 1s .2s;
         }
@@ -99,7 +99,7 @@
         &:hover {
             .container-item {
                 width: 100vw;
-                height: calc(calc(100vh - #{$section_title_height} - 8vh) / 5);
+                height: calc(calc(max(100vh, 900px) - #{$section_title_height} - 8vh) / 5);
                 &-text {
                     margin-bottom: -100px;
                 }
@@ -107,14 +107,14 @@
         }
         &-item {
             width: 100vw;
-            height: calc(calc(100vh - #{$section_title_height} - 8vh) / 3);
+            height: calc(calc(max(100vh, 900px) - #{$section_title_height} - 8vh) / 3);
             &-text-description {
                 width: 100%;
                 left: 0%;
             }
             &:hover {
                 width: 100vw !important;
-                height: calc(calc(100vh - #{$section_title_height} - 8vh) / 1.666) !important;
+                height: calc(calc(max(100vh, 900px) - #{$section_title_height} - 8vh) / 1.666) !important;
                 .container-item-text {
                     margin-bottom: 200px;
                 }

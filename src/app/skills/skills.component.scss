@@ -64,7 +64,7 @@
 
 .justified-container {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     margin-right: 200px;
     #github-banner {
         font-family: 'body2';

@@ -22,7 +22,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: right;
+		justify-content: flex-end;
 		cursor: pointer;
 		& fa-icon {
 			font-size: 25px;
@@ -132,3 +132,14 @@
 	}
 }
 
+@media screen and (max-height: 780px) {
+	.sidebar-tooltip {
+		display: none;
+	}
+}
+
+@media screen and (max-height: 590px) {
+	.sidebar-section.index {
+		display: none;
+	}
+}
