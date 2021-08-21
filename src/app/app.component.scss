@@ -8,7 +8,6 @@
 		position: fixed;
 		right: 0;
 		padding-right: 30px;
-		width: 140px;
 		display: flex;
 		flex-direction: column;
 		&.index {
@@ -138,6 +137,9 @@
 
 @media screen and (max-height: 780px) {
 	.sidebar-tooltip {
+		display: none;
+	}
+	.sidebar-list:hover + .sidebar-tooltip {
 		display: none;
 	}
 }
