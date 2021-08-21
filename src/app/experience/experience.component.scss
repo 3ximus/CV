@@ -98,10 +98,11 @@ $border_width: 3px;
 		}
 	}
 	&-description {
-		margin-top: 120px;
-		opacity: 0;
 		&-item {
+			margin-top: 120px;
 			position: absolute;
+			opacity: 0;
+			transition: opacity .5s;
 		}
 	}
 }
@@ -109,7 +110,7 @@ $border_width: 3px;
 $descriptions: '1','2','3','4','5';
 
 @each $desc in $descriptions {
-	.timeline-item[timeline-ref="#{$desc}"]:hover ~ .timeline-description  {
+	.timeline-item[timeline-ref="#{$desc}"]:hover ~ .timeline-description-item[timeline-ref="#{$desc}"]  {
 		opacity: 1;
 	}
 }
