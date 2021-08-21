@@ -5,3 +5,56 @@
 	@include section('light');
 }
 
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: calc(max(100vh, 900px) - #{$section_title_height} - 8vh); // subtract header height, and margins
+	position: relative;
+	font-family: 'body';
+	p {
+		font-size: 24px;
+		max-width: 1000px;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		padding-top: 40px;
+	}
+	.others {
+		display: flex;
+		justify-content: space-between;
+		width: 60vw;
+		height: 100%;
+		font-size: 24px;
+		.hobbies {
+			position: relative;
+			width: 100%;
+			display: inline-flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			h2 {
+				width: 100%;
+			}
+			.hobbies-item {
+				position: absolute;
+				top: 0;
+				opacity: .2;
+				display:none;
+			}
+			fa-icon {
+				font-size: 5vw;
+				opacity: .9;
+				margin: 0;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.flex-container {
+		h1 {
+			font-size: 5vw;
+		}
+	}
+}
