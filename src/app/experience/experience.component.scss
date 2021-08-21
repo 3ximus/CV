@@ -97,20 +97,23 @@ $border_width: 3px;
 			}
 		}
 	}
-	&-description {
-		&-item {
-			margin-top: 120px;
-			position: absolute;
-			opacity: 0;
-			transition: opacity .5s;
+	&-description-item {
+		margin-top: 120px;
+		position: absolute;
+		opacity: 0;
+		transition: opacity .5s;
+		left: 0;
+		img {
+			z-index: -1;
+			height: 100px;
+			filter: brightness(0);
+			opacity: 0.3;
 		}
 	}
 }
 
-$descriptions: '1','2','3','4','5';
-
-@each $desc in $descriptions {
-	.timeline-item[timeline-ref="#{$desc}"]:hover ~ .timeline-description-item[timeline-ref="#{$desc}"]  {
+@for $i from 1 through 7 {
+	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}
 }

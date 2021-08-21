@@ -11,7 +11,7 @@ import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt } from '@for
 })
 export class SkillsComponent implements OnInit {
 	skills: {name:string, value:number, icon:any}[] = [
-		{ name: "Angular JS"	 , value: 65 , icon: faAngular},
+		{ name: "Angular 2"	     , value: 65 , icon: faAngular},
 		{ name: "JavaScript"	 , value: 60 , icon: faJsSquare},
 		{ name: "Python"		 , value: 90 , icon: faPython},
 		{ name: "Django"		 , value: 80 , icon: faPython},

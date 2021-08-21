@@ -2,38 +2,15 @@
 
 <div class="flex-container">
 	<div data-aos="zoom-out" class="timeline">
-		<div class="timeline-item" timeline-ref='1'>
+		<div *ngFor="let exp of experiences; index as i" class="timeline-item" [attr.timeline-ref]="i+1">
 			<div class="timeline-item-area"></div>
-			<span class="timeline-item-title">AtmosMarine</span>
-			<span class="timeline-item-date">2021</span>
+			<span class="timeline-item-title">{{ exp.title }}</span>
+			<span class="timeline-item-date">{{ exp.date }}</span>
 		</div>
-		<div class="timeline-item" timeline-ref='2'>
-			<div class="timeline-item-area"></div>
-			<span class="timeline-item-title">CENTEC</span>
-			<span class="timeline-item-date">2020-2021</span>
-		</div>
-		<div class="timeline-item" timeline-ref='3'>
-			<div class="timeline-item-area"></div>
-			<span class="timeline-item-title">Metafora Notavel</span>
-			<span class="timeline-item-date">2018-2020</span>
-		</div>
-		<div class="timeline-item" timeline-ref='4'>
-			<div class="timeline-item-area"></div>
-			<span class="timeline-item-title">Tekever</span>
-			<span class="timeline-item-date">2018-2019</span>
-		</div>
-		<div class="timeline-item" timeline-ref='5'>
-			<div class="timeline-item-area"></div>
-			<span class="timeline-item-title">Sonae</span>
-			<span class="timeline-item-date">2015</span>
-		</div>
-		<div class="timeline-description-item" timeline-ref='1'>
-			<img src="assets/tekever_logo.png" alt="">
-			<p>My time at tekever</p>
-		</div>
-		<div class="timeline-description-item" timeline-ref='2'>
-			<img src="assets/ist_logo.png" alt="">
-			<p>My time at tekever</p>
+		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i+1">
+			<h3>{{ exp.title_extended }}</h3>
+			<p>{{ exp.description }}</p>
+			<img src="{{ exp.image }}" alt="">
 		</div>
 	</div>
 </div>
