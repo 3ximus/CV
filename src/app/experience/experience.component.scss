@@ -24,6 +24,7 @@ $border_width: 3px;
 	flex-direction: row-reverse;
 	font-family: 'body';
 	font-size: 25px;
+	height: 100px;
 	&-item {
 		position: relative;
 		width: $dot_size;
@@ -46,6 +47,9 @@ $border_width: 3px;
 		&-date {
 			position: absolute;
 			bottom: -50px;
+			width: 120px;
+			left: -#{60-$dot_size/2};
+			text-align: center;
 		}
 		&-area {
 			position: relative;
@@ -93,4 +97,20 @@ $border_width: 3px;
 			}
 		}
 	}
+	&-description {
+		margin-top: 120px;
+		opacity: 0;
+		&-item {
+			position: absolute;
+		}
+	}
 }
+
+$descriptions: '1','2','3','4','5';
+
+@each $desc in $descriptions {
+	.timeline-item[timeline-ref="#{$desc}"]:hover ~ .timeline-description  {
+		opacity: 1;
+	}
+}
+
