@@ -8,60 +8,82 @@
 .flex-container {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
 
-$dot_size: 20px;
+$dot_size: 30px;
 $item_width: 10vw;
+$border_width: 3px;
 
-.list {
+.timeline {
 	display: flex;
-	flex-direction: row;
-	list-style: none;
+	margin-top: 250px;
+	flex-direction: row-reverse;
 	font-family: 'body';
 	font-size: 25px;
 	&-item {
 		position: relative;
-		width: $item_width;
-		&-description {
-			position: relative;
-			&-title {
-				position: absolute;
-				top: -100px;
-				left: 0;
-				transform: rotateZ(-45deg);
-				width: 70px;
-				text-indent: -10px;
-			}
-			&-date {
-				position: absolute;
-				bottom: -50px;
-			}
+		width: $dot_size;
+		height: $dot_size;
+		border-radius: 50%;
+		margin-left: #{$item_width/2};
+		margin-right: #{$item_width/2};
+		border: $border_width solid $dark_color;
+		transition: background-color .4s, border-radius .4s, border-color .4s;
+		&-title {
+			position: absolute;
+			top: -100px;
+			left: 0;
+			transform: rotateZ(-45deg);
+			width: 70px;
+			text-indent: -10px;
+			pointer-events: none;
 		}
-		&-dot {
-			width: $dot_size;
-			height: $dot_size;
-			border-radius: 50%;
+		&-date {
+			position: absolute;
+			bottom: -50px;
+		}
+		&-area {
+			position: relative;
+			left: calc(-#{$item_width/2} + #{$dot_size/2});
+			top: -#{100-$dot_size/2};
+			height: 200px;
+			width: $item_width;
+		}
+		&::before, &::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: #{$item_width/2};
+			height: 4px;
+			transform: translateY(-50%);
 			background-color: $dark_color;
-			&::before, &::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				background-color: $dark_color;
-				width: #{$item_width/2};
-				height: 10px;
-			}
+			transition: background-color .4s, border-radius .4s, border-color .4s;
+		}
+		&::before {
+			left: calc(-#{$item_width/2} - #{$border_width});
+		}
+		&::after {
+			left: #{$dot_size+$border_width};
+		}
+		&:hover {
+			border-radius: 5px;
+			border-color: $red_color;
 			&::before {
-				left: -#{$item_width/2};
+				background-color: $red_color;
 			}
 			&::after {
-				right: calc(#{$item_width/2} - #{$dot_size});
+				background-color: $dark_color;
+			}
+			~ .timeline-item {
+				&, &::before, &::after {
+					background-color: $red_color;
+					border-color: $red_color;
+				}
 			}
 		}
 	}
