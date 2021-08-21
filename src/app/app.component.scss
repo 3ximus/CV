@@ -1,11 +1,14 @@
 @import '~src/colors';
 
 .sidebar {
+	ul {
+		padding: 0;
+	}
 	&-section {
 		position: fixed;
 		right: 0;
 		padding-right: 30px;
-		width: 250px;
+		width: 140px;
 		display: flex;
 		flex-direction: column;
 		&.index {
@@ -51,7 +54,7 @@
 		}
 	}
 	&-list:hover + .sidebar-tooltip {
-		opacity: 1;
+		display: inherit;
 	}
 	&-tooltip {
 		margin-right: 6px;
@@ -59,8 +62,7 @@
 		font-size: 23px;
 		writing-mode: vertical-rl;
 		text-orientation: upright;
-		opacity: 0;
-		transition: opacity .4s;
+		display: none;
 		&.dark {
 			color: $light_color;
 		}
@@ -114,6 +116,7 @@
 		&-section {
 			top: 70px;
 			right: -300px;
+			width: 240px;
 			background-color: $dark_color;
 			color: $light_color;
 			transition: right .5s;
