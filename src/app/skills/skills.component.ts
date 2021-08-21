@@ -15,7 +15,6 @@ export class SkillsComponent implements OnInit {
 		{ name: "JavaScript"	 , value: 60 , icon: faJsSquare},
 		{ name: "Python"		 , value: 90 , icon: faPython},
 		{ name: "Django"		 , value: 80 , icon: faPython},
-		{ name: "Flask"			 , value: 60 , icon: faPython},
 		{ name: "Flutter"		 , value: 60 , icon: faMobileAlt},
 		{ name: "Docker"		 , value: 60 , icon: faDocker},
 		{ name: "SQL"			 , value: 50 , icon: faDatabase},

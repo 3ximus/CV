@@ -32,7 +32,7 @@ $border_width: 3px;
 		margin-left: #{$item_width/2};
 		margin-right: #{$item_width/2};
 		border: $border_width solid $dark_color;
-		transition: background-color .4s, border-radius .4s, border-color .4s;
+		transition: background-color .7s, border-radius .4s, border-color .4s;
 		&-title {
 			position: absolute;
 			top: -100px;
@@ -41,6 +41,7 @@ $border_width: 3px;
 			width: 70px;
 			text-indent: -10px;
 			pointer-events: none;
+			transition: all .5s;
 		}
 		&-date {
 			position: absolute;
@@ -62,7 +63,7 @@ $border_width: 3px;
 			height: 4px;
 			transform: translateY(-50%);
 			background-color: $dark_color;
-			transition: background-color .4s, border-radius .4s, border-color .4s;
+			transition: background-color .7s, border-radius .4s, border-color .4s;
 		}
 		&::before {
 			left: calc(-#{$item_width/2} - #{$border_width});
@@ -73,6 +74,11 @@ $border_width: 3px;
 		&:hover {
 			border-radius: 5px;
 			border-color: $red_color;
+			.timeline-item {
+				&-title, &-date {
+					font-weight: bold;
+				}
+			}
 			&::before {
 				background-color: $red_color;
 			}
