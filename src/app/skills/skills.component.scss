@@ -55,6 +55,11 @@
         font-size: max(90vh, 30vw);
         opacity: 0;
         transition: opacity .7s;
+        img {
+            height: 70vh;
+            width: 80vw;
+            object-fit: contain;
+        }
     }
     @for $i from 0 through 20 {
         &-item[skill-ref="#{$i}"]:hover ~ &-icon[skill-ref="#{$i}"]  {

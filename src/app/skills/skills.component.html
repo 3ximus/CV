@@ -7,7 +7,8 @@
             <div class="skills-level" data-aos="growSkill" style="--value: {{ skill.value }}%;"></div>
         </li>
         <li *ngFor="let skill of skills, index as i" [attr.skill-ref]="i" class="skills-icon">
-            <fa-icon [icon]="skill.icon"></fa-icon>
+            <fa-icon *ngIf="skill.icon" [icon]="skill.icon"></fa-icon>
+            <img *ngIf="skill.image" src="{{ skill.image }}" alt="">
         </li>
     </ul>
 </div>

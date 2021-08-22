@@ -10,20 +10,20 @@ import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt } from '@for
 	styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-	skills: {name:string, value:number, icon:IconDefinition}[] = [
+	skills: {name:string, value:number, icon?:IconDefinition, image?:string}[] = [
 		{ name: "Angular 2"	     , value: 65 , icon: faAngular},
 		{ name: "JavaScript"	 , value: 60 , icon: faJsSquare},
 		{ name: "Python"		 , value: 95 , icon: faPython},
-		{ name: "Django"		 , value: 80 , icon: faPython},
-		{ name: "Flutter"		 , value: 35 , icon: faMobileAlt},
+		{ name: "Django"		 , value: 80 , image: "assets/skills/django_logo.svg"},
+		{ name: "Flutter"		 , value: 35 , image: "assets/skills/flutter_logo.svg"},
 		{ name: "Docker"		 , value: 60 , icon: faDocker},
-		{ name: "SQL"			 , value: 50 , icon: faDatabase},
+		{ name: "SQL"			 , value: 50 , image: "assets/skills/sql_logo.svg"},
 		{ name: "Git"			 , value: 90 , icon: faGitAlt},
 		{ name: "Sass"			 , value: 65 , icon: faSass},
-		{ name: "Bash scripting" , value: 90 , icon: faTerminal},
-		{ name: "Java"			 , value: 70 , icon: faJava},
-		{ name: "C/C++"			 , value: 70 , icon: faCopyright},
-		{ name: "LaTeX"			 , value: 50 , icon: faFileAlt},
+		{ name: "Bash scripting" , value: 90 , image: "assets/skills/bash_logo.svg"},
+		{ name: "Java"			 , value: 60 , icon: faJava},
+		{ name: "C/C++"			 , value: 70 , image: "assets/skills/c_logo.svg"},
+		{ name: "LaTeX"			 , value: 40 , image: "assets/skills/latex_logo.svg"},
 	];
 
 	constructor() { }
