@@ -27,29 +27,44 @@
 				width: 100%;
 			}
 			.hobbies-item {
-				position: relative;
-				z-index: 2;
+				display: flex;
+				align-items: center;
 				cursor: pointer;
-				@for $i from 0 to 10 {
-					&[hobbie-ref="#{$i}"]:hover ~ fa-icon[hobbie-ref="#{$i}"] {
-						opacity: .1;
-					}
+				p {
+					margin-top: 20px;
+					margin-bottom: 20px;
 				}
-			}
-			fa-icon {
-				position: absolute;
-				top: 0;
-				font-size: 20vw;
-				opacity: 0;
-				transition: opacity .6s;
+				fa-icon {
+					font-size: 30px;
+					width: 50px;
+					text-align: center;
+					margin-right: 10px;
+				}
 			}
 		}
 		.languages {
 			width: 50%;
-			.lang-level {
-				font-size: 20px;
+			.languages-item {
+				display: flex;
+				align-items: center;
+				.lang-flag {
+					width: 40px;
+					margin-right: 20px;
+					object-fit: contain;
+				}
+				.lang-level {
+					font-size: 20px;
+				}
 			}
 		}
 	}
 }
 
+@media screen and (max-width: 620px) {
+	.hobbies-item {
+		p {
+			margin-top: 10px !important;
+			margin-bottom: 10px !important;
+		}
+	}
+}

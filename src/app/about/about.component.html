@@ -12,15 +12,17 @@
 	<div class="others">
 		<section class="languages">
 			<h2>Languages</h2>
-			<div *ngFor="let lang of languages; index as i" [attr.lang-ref]="i" class="languages-item">
+			<div *ngFor="let lang of languages" class="languages-item">
+				<img src="{{ lang.image }}" class="lang-flag">
 				<p><b>{{ lang.name }}</b><br><span class="lang-level">{{ lang.level }}</span></p>
 			</div>
-			<!-- <img *ngFor="let lang of languages; index as i" [attr.lang-ref]="i" src="{{ lang.image }}"> -->
 		</section>
 		<section class="hobbies">
 			<h2>My hobbies</h2>
-			<p *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" class="hobbies-item">{{ hobbie.name }}</p>
-			<fa-icon *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" [icon]="hobbie.icon"></fa-icon>
+			<div *ngFor="let hobbie of hobbies" class="hobbies-item">
+				<fa-icon [icon]="hobbie.icon"></fa-icon>
+				<p>{{ hobbie.name }}</p>
+			</div>
 		</section>
 	</div>
 </div>

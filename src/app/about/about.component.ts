@@ -8,19 +8,19 @@ import { faBicycle, faHiking, faCampground, faMountain, faPencilAlt, faGuitar } 
 })
 export class AboutComponent implements OnInit {
 	hobbies: {name:string, icon:any}[] = [
-		{ name: "Mountain Biking" , icon: faBicycle},
-		{ name: "Hiking"          , icon: faHiking},
-		{ name: "Camping"         , icon: faCampground},
-		{ name: "Climbing"        , icon: faMountain},
-		{ name: "Drawing"         , icon: faPencilAlt},
 		{ name: "Guitar"          , icon: faGuitar},
+		{ name: "Drawing"         , icon: faPencilAlt},
+		{ name: "Climbing"        , icon: faMountain},
+		{ name: "Camping"         , icon: faCampground},
+		{ name: "Hiking"          , icon: faHiking},
+		{ name: "Mountain Biking" , icon: faBicycle},
 	]
 
 	languages: {name:string, level:string, image:string}[] = [
-		{ name: "Portuguese" , level: "Native"     , image:"https://lipis.github.io/flag-icon-css/flags/4x3/pt.svg"} ,
-		{ name: "English"    , level: "Fluent"     , image:"https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg"} ,
-		{ name: "Spanish"    , level: "Reasonable" , image:"https://lipis.github.io/flag-icon-css/flags/4x3/es.svg"} ,
-		{ name: "French"     , level: "Basic"   , image:"https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg"} ,
+		{ name: "Portuguese" , level: "Native"     , image:"assets/flags/pt.svg"},
+		{ name: "English"    , level: "Fluent"     , image:"assets/flags/uk.svg"},
+		{ name: "Spanish"    , level: "Reasonable" , image:"assets/flags/es.svg"},
+		{ name: "French"     , level: "Basic"      , image:"assets/flags/fr.svg"},
 	]
 
 	constructor() { }
