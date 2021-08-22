@@ -12,7 +12,7 @@
 	align-items: center;
 	width: 80%;
 	font-family: 'body';
-	p {
+	.about-me {
 		font-size: 24px;
 		padding-top: 30px;
 	}
@@ -27,29 +27,29 @@
 				width: 100%;
 			}
 			.hobbies-item {
-				position: absolute;
-				top: 0;
-				opacity: .2;
-				display:none;
+				position: relative;
+				z-index: 2;
+				cursor: pointer;
+				@for $i from 0 to 10 {
+					&[hobbie-ref="#{$i}"]:hover ~ fa-icon[hobbie-ref="#{$i}"] {
+						opacity: .1;
+					}
+				}
 			}
 			fa-icon {
-				font-size: 5vw;
-				opacity: .9;
-				margin: 0;
-				margin: 5vw;
+				position: absolute;
+				top: 0;
+				font-size: 20vw;
+				opacity: 0;
+				transition: opacity .6s;
 			}
 		}
 		.languages {
 			width: 50%;
-		}
-
-	}
-}
-
-@media screen and (max-width: 700px) {
-	.flex-container {
-		h1 {
-			font-size: 5vw;
+			.lang-level {
+				font-size: 20px;
+			}
 		}
 	}
 }
+

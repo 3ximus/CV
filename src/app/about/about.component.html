@@ -1,7 +1,7 @@
 <h1 data-aos="slide-up" class="section-title">What else?</h1>
 
 <div class="flex-container">
-	<p>
+	<p class="about-me">
 	I'm curious, committed and perfectionist in my work.
 	I like to automate tasks and strive for efficiency.
 	<br>
@@ -11,17 +11,15 @@
 	</p>
 	<div class="others">
 		<section class="languages">
-			<h2>Languages:</h2>
-			<div *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i" class="languages-item">
-				<p><b>{{ lang.name }}</b> : {{ lang.level }}</p>
+			<h2>Languages</h2>
+			<div *ngFor="let lang of languages; index as i" [attr.lang-ref]="i" class="languages-item">
+				<p><b>{{ lang.name }}</b><br><span class="lang-level">{{ lang.level }}</span></p>
 			</div>
-			<img *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i" src="{{ lang.image }}">
+			<!-- <img *ngFor="let lang of languages; index as i" [attr.lang-ref]="i" src="{{ lang.image }}"> -->
 		</section>
 		<section class="hobbies">
-			<h2>Hobbies:</h2>
-			<div *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" class="hobbies-item">
-				<p>{{ hobbie.name }}</p>
-			</div>
+			<h2>My hobbies</h2>
+			<p *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" class="hobbies-item">{{ hobbie.name }}</p>
 			<fa-icon *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" [icon]="hobbie.icon"></fa-icon>
 		</section>
 	</div>

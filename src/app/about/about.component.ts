@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
 		{ name: "Portuguese" , level: "Native"     , image:"https://lipis.github.io/flag-icon-css/flags/4x3/pt.svg"} ,
 		{ name: "English"    , level: "Fluent"     , image:"https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg"} ,
 		{ name: "Spanish"    , level: "Reasonable" , image:"https://lipis.github.io/flag-icon-css/flags/4x3/es.svg"} ,
-		{ name: "French"     , level: "Baguette"   , image:"https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg"} ,
+		{ name: "French"     , level: "Basic"   , image:"https://lipis.github.io/flag-icon-css/flags/4x3/fr.svg"} ,
 	]
 
 	constructor() { }

@@ -58,7 +58,7 @@
     }
     @for $i from 0 through 20 {
         &-item[skill-ref="#{$i}"]:hover ~ &-icon[skill-ref="#{$i}"]  {
-            opacity: .05;
+            opacity: .1;
         }
     }
 }
