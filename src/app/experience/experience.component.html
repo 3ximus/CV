@@ -2,7 +2,7 @@
 
 <div class="flex-container">
 	<div data-aos="zoom-out" class="timeline">
-		<div *ngFor="let exp of experiences; index as i" class="timeline-item" [attr.timeline-ref]="i">
+		<div *ngFor="let exp of experiences; index as i" class="timeline-item" [attr.timeline-ref]="i" (click)="setClick(i)" [ngClass]="selected==i?'active':''">
 			<div class="timeline-item-area"></div>
 			<span class="timeline-item-title">{{ exp.title }}</span>
 			<span class="timeline-item-date">{{ exp.date }}</span>

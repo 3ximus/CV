@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
     experiences: {title:string, date:string, title_extended:string, description:string, image:string}[] = [
@@ -14,9 +14,14 @@ export class ExperienceComponent implements OnInit {
         {title: "Sonae"            , date: "2015"      , title_extended:"Summer Internship at Sonae Industria"                                      , description:"Full-Time Internship at Sonae's manufacturing plant. Warehouse inventory management." , image:"assets/sonae_logo.png"} ,
     ]
 
-  constructor() { }
+    selected:number=-1;
 
-  ngOnInit(): void {
-  }
+    constructor() { }
+
+    ngOnInit(): void { }
+
+    setClick(i:number) {
+        this.selected = i == this.selected ? -1 : i;
+    }
 
 }

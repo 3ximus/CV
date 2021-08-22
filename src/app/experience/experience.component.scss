@@ -76,7 +76,7 @@ $border_width: 3px;
 		&::after {
 			left: #{$dot_size+$border_width};
 		}
-		&:hover {
+		&:hover, &.active {
 			border-radius: 5px;
 			border-color: $red_color;
 			.timeline-item {
@@ -117,5 +117,8 @@ $border_width: 3px;
 	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}
+	// .timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
+	// 	opacity: 1;
+	// }
 }
 
