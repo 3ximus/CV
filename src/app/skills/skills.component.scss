@@ -47,6 +47,20 @@
             height: 10px;
         }
     }
+    &-icon {
+        position: absolute;
+        z-index: -1;
+        bottom: -40vh;
+        left: 5%;
+        font-size: max(90vh, 30vw);
+        opacity: 0;
+        transition: opacity .7s;
+    }
+    @for $i from 0 through 20 {
+        &-item[skill-ref="#{$i}"]:hover ~ &-icon[skill-ref="#{$i}"]  {
+            opacity: .05;
+        }
+    }
 }
 
 [data-aos="growSkill"] {
@@ -71,17 +85,6 @@
         font-size: 35px;
     }
 }
-
-.backdrop {
-    position: relative;
-    height: 0;
-    top: 4%;
-    left: 4%;
-    font-size: 90vh;
-    opacity: 0;
-    transition: opacity .3s;
-}
-
 
 @media screen and (max-width: 1415px) {
     .skills {

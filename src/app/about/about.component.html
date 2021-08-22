@@ -2,32 +2,27 @@
 
 <div class="flex-container">
 	<p>
-	I'm curious, committed and
-	perfectionist in my work. I like to
-	automate tasks and strive for
-	efficiency.
+	I'm curious, committed and perfectionist in my work.
+	I like to automate tasks and strive for efficiency.
 	<br>
 	<br>
-	I can quickly learn any new tool or
-	programming language. Also
-	proficient in Adobe Photoshop,
-	Autodesk Maya and other 3D or
-	multimedia software.
+	I can quickly learn any new tool or programming language.
+	I'm Also proficient in Adobe Photoshop, Autodesk Maya and other 3D or multimedia software.
 	</p>
 	<div class="others">
-		<section class="hobbies">
-			<h2>Hobbies:</h2>
-			<div *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i+1" class="hobbies-item">
-				<p>{{ hobbie.name }}</p>
-			</div>
-			<fa-icon *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i+1" [icon]="hobbie.icon"></fa-icon>
-		</section>
 		<section class="languages">
 			<h2>Languages:</h2>
-			<div *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i+1" class="languages-item">
+			<div *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i" class="languages-item">
 				<p><b>{{ lang.name }}</b> : {{ lang.level }}</p>
 			</div>
-			<img *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i+1" src="{{ lang.image }}">
+			<img *ngFor="let lang of languages; index as i" [attr.hobbie-ref]="i" src="{{ lang.image }}">
+		</section>
+		<section class="hobbies">
+			<h2>Hobbies:</h2>
+			<div *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" class="hobbies-item">
+				<p>{{ hobbie.name }}</p>
+			</div>
+			<fa-icon *ngFor="let hobbie of hobbies; index as i" [attr.hobbie-ref]="i" [icon]="hobbie.icon"></fa-icon>
 		</section>
 	</div>
 </div>

@@ -112,7 +112,7 @@ $border_width: 3px;
 	}
 }
 
-@for $i from 1 through 7 {
+@for $i from 0 through 7 {
 	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}

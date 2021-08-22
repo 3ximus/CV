@@ -1,13 +1,13 @@
-<div #backdropElement class="backdrop">
-    <fa-icon [icon]="backdropIcon"></fa-icon>
-</div>
 
 <h1 data-aos="slide-up" class="section-title">What I can do</h1>
 <div class="skills">
     <ul class="skills-list">
-        <li *ngFor="let skill of skills" data-aos="zoom-out" class="skills-item" (mouseover)="changeIcon(skill.icon)" (mouseleave)="hideIcon()">
+        <li *ngFor="let skill of skills, index as i" [attr.skill-ref]="i" data-aos="zoom-out" class="skills-item">
             <h2 class="skills-title">{{ skill.name }}</h2>
             <div class="skills-level" data-aos="growSkill" style="--value: {{ skill.value }}%;"></div>
+        </li>
+        <li *ngFor="let skill of skills, index as i" [attr.skill-ref]="i" class="skills-icon">
+            <fa-icon [icon]="skill.icon"></fa-icon>
         </li>
     </ul>
 </div>

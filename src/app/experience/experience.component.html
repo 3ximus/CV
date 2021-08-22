@@ -2,12 +2,12 @@
 
 <div class="flex-container">
 	<div data-aos="zoom-out" class="timeline">
-		<div *ngFor="let exp of experiences; index as i" class="timeline-item" [attr.timeline-ref]="i+1">
+		<div *ngFor="let exp of experiences; index as i" class="timeline-item" [attr.timeline-ref]="i">
 			<div class="timeline-item-area"></div>
 			<span class="timeline-item-title">{{ exp.title }}</span>
 			<span class="timeline-item-date">{{ exp.date }}</span>
 		</div>
-		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i+1">
+		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i">
 			<h3>{{ exp.title_extended }}</h3>
 			<p>{{ exp.description }}</p>
 			<img src="{{ exp.image }}" alt="">
