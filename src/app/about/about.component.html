@@ -11,15 +11,15 @@
 	</p>
 	<div class="others">
 		<section class="languages">
-			<h2 data-aos="zoom-out">Languages</h2>
-			<div *ngFor="let lang of languages" class="languages-item" data-aos="zoom-out">
+			<h2 data-aos="zoom-out" data-aos-offset="50">Languages</h2>
+			<div *ngFor="let lang of languages" class="languages-item" data-aos="zoom-out" data-aos-offset="50">
 				<img src="{{ lang.image }}" class="lang-flag">
 				<p><b>{{ lang.name }}</b><br><span class="lang-level">{{ lang.level }}</span></p>
 			</div>
 		</section>
 		<section class="hobbies">
-			<h2 data-aos="zoom-out">My hobbies</h2>
-			<div *ngFor="let hobbie of hobbies" class="hobbies-item" data-aos="zoom-out">
+			<h2 data-aos="zoom-out" data-aos-offset="50">My hobbies</h2>
+			<div *ngFor="let hobbie of hobbies" class="hobbies-item" data-aos="zoom-out" data-aos-offset="50">
 				<fa-icon [icon]="hobbie.icon"></fa-icon>
 				<p>{{ hobbie.name }}</p>
 			</div>

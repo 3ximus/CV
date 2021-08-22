@@ -28,9 +28,6 @@
 		.hobbies {
 			width: 50%;
 			position: relative;
-			h2 {
-				width: 100%;
-			}
 			.hobbies-item {
 				display: flex;
 				align-items: center;
@@ -65,7 +62,19 @@
 	}
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 620px){
+	.others h2 {
+		font-size: 25px;
+	}
+	.about-me {
+		font-size: 23px !important;
+		padding: 0px !important;
+		margin: 0;
+		margin-top: -20px;
+		.highlight {
+			padding: 2px !important;
+		}
+	}
 	.hobbies-item {
 		p {
 			margin-top: 10px !important;
@@ -76,6 +85,21 @@
 		p {
 			margin-top: 10px !important;
 			margin-bottom: 10px !important;
+		}
+	}
+}
+
+@media screen and (max-height: 900px){
+	.hobbies-item {
+		p {
+			margin-top: 15px !important;
+			margin-bottom: 15px !important;
+		}
+	}
+	.languages-item {
+		p {
+			margin-top: 15px !important;
+			margin-bottom: 15px !important;
 		}
 	}
 }
