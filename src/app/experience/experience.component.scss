@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '~src/colors';
 @import '~src/globals';
 
@@ -30,8 +31,8 @@ $border_width: 3px;
 		width: $dot_size;
 		height: $dot_size;
 		border-radius: 50%;
-		margin-left: #{$item_width/2};
-		margin-right: #{$item_width/2};
+		margin-left: #{math.div($item_width, 2)};
+		margin-right: #{math.div($item_width, 2)};
 		border: $border_width solid $dark_color;
 		transition: background-color .7s, border-radius .4s, border-color .4s;
 		&-title {
@@ -48,13 +49,13 @@ $border_width: 3px;
 			position: absolute;
 			bottom: -50px;
 			width: 120px;
-			left: -#{60-$dot_size/2};
+			left: -#{60 - math.div($dot_size, 2)};
 			text-align: center;
 		}
 		&-area {
 			position: relative;
-			left: calc(-#{$item_width/2} + #{$dot_size/2});
-			top: -#{100-$dot_size/2};
+			left: calc(-#{math.div($item_width, 2)} + #{math.div($dot_size, 2)});
+			top: -#{100 - math.div($dot_size, 2)};
 			height: 200px;
 			width: $item_width;
 		}
@@ -63,14 +64,14 @@ $border_width: 3px;
 			display: block;
 			position: absolute;
 			top: 50%;
-			width: #{$item_width/2};
+			width: #{math.div($item_width, 2)};
 			height: 4px;
 			transform: translateY(-50%);
 			background-color: $dark_color;
 			transition: background-color .7s, border-radius .4s, border-color .4s;
 		}
 		&::before {
-			left: calc(-#{$item_width/2} - #{$border_width});
+			left: calc(-#{math.div($item_width, 2)} - #{$border_width});
 		}
 		&::after {
 			left: #{$dot_size+$border_width};
