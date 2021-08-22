@@ -1,25 +1,25 @@
 <h1 data-aos="slide-up" class="section-title">What else?</h1>
 
 <div class="flex-container">
-	<p class="about-me">
+	<p data-aos="fade-in" class="about-me">
 	I'm curious, committed and perfectionist in my work.
 	I like to automate tasks and strive for efficiency.
 	<br>
 	<br>
 	I can quickly learn any new tool or programming language.
-	I'm Also proficient in Adobe Photoshop, Autodesk Maya and other 3D or multimedia software.
+	I'm Also proficient in Adobe <span class="highlight">Photoshop</span>, Autodesk <span class="highlight">Maya</span> and other 3D / multimedia software.
 	</p>
 	<div class="others">
 		<section class="languages">
 			<h2>Languages</h2>
-			<div *ngFor="let lang of languages" class="languages-item">
+			<div *ngFor="let lang of languages" class="languages-item" data-aos="zoom-out">
 				<img src="{{ lang.image }}" class="lang-flag">
 				<p><b>{{ lang.name }}</b><br><span class="lang-level">{{ lang.level }}</span></p>
 			</div>
 		</section>
 		<section class="hobbies">
 			<h2>My hobbies</h2>
-			<div *ngFor="let hobbie of hobbies" class="hobbies-item">
+			<div *ngFor="let hobbie of hobbies" class="hobbies-item" data-aos="zoom-out">
 				<fa-icon [icon]="hobbie.icon"></fa-icon>
 				<p>{{ hobbie.name }}</p>
 			</div>

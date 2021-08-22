@@ -15,6 +15,11 @@
 	.about-me {
 		font-size: 24px;
 		padding-top: 30px;
+		.highlight {
+			background-color: $dark_color;
+			color: $light_color;
+			padding: 5px;
+		}
 	}
 	.others {
 		display: flex;
@@ -62,6 +67,12 @@
 
 @media screen and (max-width: 620px) {
 	.hobbies-item {
+		p {
+			margin-top: 10px !important;
+			margin-bottom: 10px !important;
+		}
+	}
+	.languages-item {
 		p {
 			margin-top: 10px !important;
 			margin-bottom: 10px !important;
