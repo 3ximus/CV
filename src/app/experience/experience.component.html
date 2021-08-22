@@ -7,7 +7,7 @@
 			<span class="timeline-item-title">{{ exp.title }}</span>
 			<span class="timeline-item-date">{{ exp.date }}</span>
 		</div>
-		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i">
+		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i"  [ngClass]="selected==i?'active':''">
 			<h3>{{ exp.title_extended }}</h3>
 			<p>{{ exp.description }}</p>
 			<img src="{{ exp.image }}" alt="">

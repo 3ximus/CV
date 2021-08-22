@@ -117,8 +117,8 @@ $border_width: 3px;
 	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}
-	.timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
-		opacity: 1;
-	}
+	// .timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
+	// 	opacity: 1;
+	// }
 }
 
