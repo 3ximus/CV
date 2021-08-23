@@ -11,7 +11,7 @@ export class ExperienceComponent implements OnInit {
             title: "AtmosMarine",
             date: "2021 - Present",
             title_extended:"Website Development for AtmosMarine (Freelance)",
-            description:"Full website development/design using the Django framework. Their public demo page can be viewed at:",
+            description:"Full website development/design/host configuration. Built using the Django framework. Their public demo page can be viewed at:",
             link: "http://client.atmosmarine.com/demo",
             image:"assets/atm_logo.png"
         }, {
