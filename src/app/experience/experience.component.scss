@@ -48,8 +48,8 @@ $border_width: 3px;
 		&-date {
 			position: absolute;
 			bottom: -50px;
-			width: 120px;
-			left: -#{60 - math.div($dot_size, 2)};
+			width: 140px;
+			left: -#{70 - math.div($dot_size, 2)};
 			text-align: center;
 		}
 		&-area {
@@ -107,6 +107,8 @@ $border_width: 3px;
 		img {
 			z-index: -1;
 			height: 100px;
+			max-width: 90vw;
+			object-fit: contain;
 			filter: brightness(0);
 			opacity: 0.3;
 		}
@@ -117,8 +119,31 @@ $border_width: 3px;
 	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}
-	// .timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
-	// 	opacity: 1;
-	// }
+	.timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
+		opacity: 1;
+	}
 }
 
+
+@media screen and (max-width: 820px) {
+	.timeline {
+		font-size: 21px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.timeline-item-date {
+		left: -#{35 - math.div($dot_size, 2)};
+		bottom: -62px;
+		width: 70px;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.timeline-item-title {
+		font-size: 18px;
+		transform: rotateZ(-65deg);
+		left: -20px;
+	}
+}
