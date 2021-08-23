@@ -85,6 +85,11 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 200px;
+    z-index: 3;
+    a, a:hover, a:visited {
+        color: inherit;
+        text-decoration: inherit;
+    }
     #github-banner {
         font-family: 'body2';
         font-size: 35px;
