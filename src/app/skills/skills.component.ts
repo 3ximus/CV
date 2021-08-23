@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { IconDefinition, faGitAlt, faAngular, faPython, faDocker, faSass, faJava, faJsSquare } from '@fortawesome/free-brands-svg-icons';
-import {faDatabase, faCopyright, faTerminal, faFileAlt, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faGitAlt, faAngular, faPython, faDocker, faSass, faJava, faJsSquare, faPhp } from '@fortawesome/free-brands-svg-icons';
 
 
 @Component({
@@ -18,6 +17,7 @@ export class SkillsComponent implements OnInit {
 		{ name: "Flutter"		 , value: 35 , image: "assets/skills/flutter_logo.svg"},
 		{ name: "Docker"		 , value: 60 , icon: faDocker},
 		{ name: "SQL"			 , value: 50 , image: "assets/skills/sql_logo.svg"},
+		{ name: "php"			 , value: 50 , icon: faPhp},
 		{ name: "Git"			 , value: 90 , icon: faGitAlt},
 		{ name: "Sass"			 , value: 65 , icon: faSass},
 		{ name: "Bash scripting" , value: 90 , image: "assets/skills/bash_logo.svg"},
