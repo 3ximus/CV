@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-    experiences: {title:string, date:string, title_extended:string, description:string, image:string}[] = [
+    experiences: {title:string, date:string, title_extended:string, description:string, link?:string, image:string}[] = [
         {
             title: "AtmosMarine",
             date: "2021 - Present",
             title_extended:"Website Development for AtmosMarine (Freelance)",
-            description:"Full website development/design using the Django framework.",
+            description:"Full website development/design using the Django framework. Their public demo page can be viewed at:",
+            link: "http://client.atmosmarine.com/demo",
             image:"assets/atm_logo.png"
         }, {
             title: "CENTEC",

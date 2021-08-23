@@ -9,7 +9,10 @@
 		</div>
 		<div *ngFor="let exp of experiences; index as i" class="timeline-description-item" timeline-ref='1' [attr.timeline-ref]="i"  [ngClass]="selected==i?'active':''">
 			<h3>{{ exp.title_extended }}</h3>
-			<p>{{ exp.description }}</p>
+			<p>{{ exp.description }}
+            <br>
+            <a *ngIf="exp.link" href="{{ exp.link }}">{{ exp.link }}</a>
+            </p>
 			<img src="{{ exp.image }}" alt="">
 		</div>
 	</div>
