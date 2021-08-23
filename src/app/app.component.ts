@@ -45,9 +45,4 @@ export class AppComponent implements AfterViewInit, OnInit {
             document.body.clientHeight, document.documentElement.clientHeight
         );
     }
-
-    goTo(url: string) {
-        window.open(url);
-    }
-
 }
