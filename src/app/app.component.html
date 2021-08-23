@@ -40,7 +40,7 @@
 
 	<div class="sidebar-section contacts" [class]="isSidebarOpen?'open':''">
 		<ul class="sidebar-list contacts">
-			<li appColorSwitch class="sidebar-item">
+			<li appColorSwitch class="sidebar-item" (click)="goTo('mailto:fabio4335@gmail.com')">
 				<h2 class="sidebar-item-tooltip">email</h2>
 				<fa-icon [icon]="['fas', 'envelope']"></fa-icon>
 			</li>
