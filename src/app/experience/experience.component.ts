@@ -9,7 +9,7 @@ export class ExperienceComponent implements OnInit {
     experiences: {title:string, date:string, title_extended:string, description:string, image:string}[] = [
         {
             title: "AtmosMarine",
-            date: "2021",
+            date: "2021 - Present",
             title_extended:"Website Development for AtmosMarine (Freelance)",
             description:"Full website development/design using the Django framework.",
             image:"assets/atm_logo.png"
@@ -17,7 +17,7 @@ export class ExperienceComponent implements OnInit {
             title: "CENTEC",
             date: "2020 - 2021",
             title_extended:"Researcher at CENTEC (Centre for Marine Technology and Ocean Engineering)",
-            description:"Weather forecast research using machine Learning Techniques. Weather database creation/management. Website Development with Angular2.",
+            description:"Weather forecast research using machine learning techniques. Weather database creation/management. Website Development with Angular2.",
             image:"assets/centec_logo.png"
         }, {
             title: "Metafora Notavel",
@@ -41,13 +41,22 @@ export class ExperienceComponent implements OnInit {
     ]
 
     selected:number=-1;
+    backup_sel:number=-1;
 
     constructor() { }
 
     ngOnInit(): void { }
 
-    setClick(i:number) {
-        this.selected = i == this.selected ? -1 : i;
+    setSelected(i:number) {
+        this.backup_sel = this.selected = i == this.backup_sel ? -1 : i;
+    }
+    mouseEnter() { // used to momentarily hide the selected item
+        this.backup_sel = this.selected;
+        this.selected = -1;
+    }
+
+    mouseLeave() { // used to restore the selected item
+        this.selected = this.backup_sel;
     }
 
 }

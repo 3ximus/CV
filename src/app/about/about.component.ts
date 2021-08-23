@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
 		{ name: "Portuguese" , level: "Native"     , image:"assets/flags/pt.svg"},
 		{ name: "English"    , level: "Fluent"     , image:"assets/flags/uk.svg"},
 		{ name: "Spanish"    , level: "Reasonable" , image:"assets/flags/es.svg"},
-		{ name: "French"     , level: "Basic"      , image:"assets/flags/fr.svg"},
+		{ name: "French"     , level: "Basic (Currently Learning)"      , image:"assets/flags/fr.svg"},
 	]
 
 	constructor() { }

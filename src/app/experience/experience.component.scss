@@ -48,8 +48,8 @@ $border_width: 3px;
 		&-date {
 			position: absolute;
 			bottom: -50px;
-			width: 140px;
-			left: -#{70 - math.div($dot_size, 2)};
+			width: 200px;
+			left: -#{100 - math.div($dot_size, 2)};
 			text-align: center;
 		}
 		&-area {
@@ -76,8 +76,7 @@ $border_width: 3px;
 		&::after {
 			left: #{$dot_size+$border_width};
 		}
-		&:hover, &.active {
-			border-radius: 5px;
+		&:hover {
 			border-color: $red_color;
 			.timeline-item {
 				&-title, &-date {
@@ -97,13 +96,21 @@ $border_width: 3px;
 				}
 			}
 		}
+		&.active {
+			border-radius: 5px;
+			border-color: $red_color;
+		}
 	}
+
 	&-description-item {
 		margin-top: 120px;
 		position: absolute;
 		opacity: 0;
 		transition: opacity .5s;
 		left: 0;
+		&.active {
+			opacity: 1;
+		}
 		img {
 			z-index: -1;
 			height: 100px;
@@ -119,11 +126,7 @@ $border_width: 3px;
 	.timeline-item[timeline-ref="#{$i}"]:hover ~ .timeline-description-item[timeline-ref="#{$i}"]  {
 		opacity: 1;
 	}
-	.timeline-item[timeline-ref="#{$i}"].active ~ .timeline-description-item[timeline-ref="#{$i}"]  {
-		opacity: 1;
-	}
 }
-
 
 @media screen and (max-width: 820px) {
 	.timeline {
