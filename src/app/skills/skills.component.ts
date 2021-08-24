@@ -9,8 +9,8 @@ import { IconDefinition, faGitAlt, faAngular, faPython, faDocker, faSass, faJava
 	styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-	skills: {name:string, value:number, icon?:IconDefinition, image?:string}[] = [
-		{ name: "Angular 2"	     , value: 65 , icon: faAngular},
+	skills: {name:string, value:number, ref?:string, icon?:IconDefinition, image?:string}[] = [
+		{ name: "Angular 2"	     , value: 65 , ref: "angus", icon: faAngular},
 		{ name: "JavaScript"	 , value: 60 , icon: faJsSquare},
 		{ name: "Python"		 , value: 95 , icon: faPython},
 		{ name: "Django"		 , value: 80 , image: "assets/skills/django_logo.svg"},

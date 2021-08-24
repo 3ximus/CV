@@ -59,6 +59,7 @@
             height: 70vh;
             width: 80vw;
             object-fit: contain;
+            object-position: left bottom;
         }
     }
     @for $i from 0 through 20 {

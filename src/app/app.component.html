@@ -65,3 +65,6 @@
 <div class="sidebar-scrim" [class]="isSidebarOpen?'open':''" (click)="sideBarToggle()"></div>
 
 <p appColorSwitch class="scroll-arrow" *ngIf="currentPage != NUMBER_OF_PAGES-1">&gt;</p>
+
+<router-outlet></router-outlet>
+<router-outlet name="view"></router-outlet>

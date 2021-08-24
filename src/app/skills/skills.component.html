@@ -2,7 +2,7 @@
 <h1 data-aos="slide-up" class="section-title">What I can do</h1>
 <div class="skills">
     <ul class="skills-list">
-        <li *ngFor="let skill of skills, index as i" [attr.skill-ref]="i" data-aos="zoom-out" class="skills-item">
+        <li *ngFor="let skill of skills, index as i" [attr.skill-ref]="i" data-aos="zoom-out" class="skills-item"  [routerLink]="skill.ref ? [ '/', { outlets: { view: ['project', skill.ref ] } } ] : []">
             <h2 class="skills-title">{{ skill.name }}</h2>
             <div class="skills-level" data-aos="growSkill" style="--value: {{ skill.value }}%;"></div>
         </li>
