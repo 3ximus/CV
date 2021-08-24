@@ -22,7 +22,23 @@
         -webkit-column-break-inside: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
-        cursor: pointer;
+        cursor: default;
+        &.ref {
+            cursor: pointer;
+            .skills-title::after {
+                content: '·';
+                position: absolute;
+                right: 0;
+                color: $gold_color;
+                font-size: 70px;
+            }
+            &:hover {
+                .skills-title {
+                    transform: scale(1.05);
+                }
+                color: $gold_color;
+            }
+        }
     }
     &-title {
         margin: 0;
@@ -30,6 +46,7 @@
         font-family: 'body';
         font-size: 35px;
         line-height: 140px;
+        transition: color .4s, transform .1s;
     }
     &-level {
         position: relative;

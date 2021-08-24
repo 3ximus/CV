@@ -17,7 +17,7 @@ export class SkillsComponent implements OnInit {
 		{ name: "Flutter"		 , value: 35 , image: "assets/skills/flutter_logo.svg"},
 		{ name: "Docker"		 , value: 60 , icon: faDocker},
 		{ name: "SQL"			 , value: 50 , image: "assets/skills/sql_logo.svg"},
-		{ name: "php"			 , value: 50 , icon: faPhp},
+		{ name: "php"			 , value: 50 , ref: "test", icon: faPhp},
 		{ name: "Git"			 , value: 90 , icon: faGitAlt},
 		{ name: "Sass"			 , value: 65 , icon: faSass},
 		{ name: "Bash scripting" , value: 90 , image: "assets/skills/bash_logo.svg"},
