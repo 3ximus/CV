@@ -32,11 +32,8 @@
                 color: $gold_color;
                 font-size: 70px;
             }
-            &:hover {
-                .skills-title {
-                    transform: scale(1.05);
-                }
-                color: $gold_color;
+            &:hover .skills-title {
+                transform: scale(1.05);
             }
         }
     }
