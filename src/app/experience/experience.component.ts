@@ -30,7 +30,7 @@ export class ExperienceComponent implements OnInit {
             title: "Tekever",
             date: "2018 - 2019",
             title_extended:"Partnership with Tekever for Thesis Development",
-            description:"Developing an Intrusion Detection System with machine learning techniques with Tekever's Cyber-Security Team. Project used for my thesis.",
+            description:"Developing an Intrusion Detection System with machine learning techniques with Tekever's Cyber-Security Team. Project used for my MSc thesis.",
             image:"assets/tekever_logo.png"
         }, {
             title: "Sonae",
