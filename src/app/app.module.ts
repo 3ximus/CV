@@ -9,7 +9,7 @@ import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBars, faHome, faEnvelope, faUser, faTools, faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome, faEnvelope, faUser, faTools, faGraduationCap, faBriefcase, faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import { ParallaxDirective } from './parallax.directive';
@@ -37,6 +37,6 @@ import { ColorSwitchDirective } from './colorSwitch.directive';
 })
 export class AppModule {
     constructor(private library: FaIconLibrary) {
-        library.addIcons(faBars, faHome, faUser, faTools, faGraduationCap, faBriefcase, faEnvelope, faGithub, faLinkedinIn);
+        library.addIcons(faBars, faHome, faUser, faTools, faGraduationCap, faBriefcase, faEnvelope, faGithub, faLinkedinIn, faFileDownload);
     }
 }
